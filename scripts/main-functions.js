@@ -3,107 +3,66 @@
  */
 
 /**
- * Resource Control / Ring Speed and Power
+ * Reanimal Control / Ring Speed and Power
  */
 
 const upgradeRingSpeedOne = () => {
-  if (player.source > rings[0].ringSourceCost) {
-    player.source -= rings[0].ringSourceCost;
+  if (player.animal > rings[0].ringAnimalCost) {
+    player.animal -= rings[0].ringAnimalCost;
     rings[0].rotationalSpeedX += 0.015;
 
     rings[0].ringLevel = 1;
-    rings[0].ringSourceCost = (rings[0].ringSourceCost * 1.15) + (1 * rings[0].ringLevel);
+    rings[0].ringAnimalCost = (rings[0].ringAnimalCost * 1.15) + (1 * rings[0].ringLevel);
   }
 }
 
 const upgradeRingSpeedTwo = () => {
-  if (player.source > rings[1].ringSourceCost) {
-    player.source -= rings[1].ringSourceCost;
+  if (player.animal > rings[1].ringAnimalCost) {
+    player.animal -= rings[1].ringAnimalCost;
     rings[1].rotationalSpeedX += 0.015;
 
     rings[1].ringLevel = 1;
-    rings[1].ringSourceCost = (rings[1].ringSourceCost * 1.15) + (1 * rings[1].ringLevel);
+    rings[1].ringAnimalCost = (rings[1].ringAnimalCost * 1.15) + (1 * rings[1].ringLevel);
   }
 }
 
 const upgradeRingSpeedThree = () => {
-  if (player.source > rings[2].ringSourceCost) {
-    player.source -= rings[2].ringSourceCost;
+  if (player.animal > rings[2].ringAnimalCost) {
+    player.animal -= rings[2].ringAnimalCost;
     rings[2].rotationalSpeedX += 0.015;
 
     rings[2].ringLevel = 1;
-    rings[2].ringSourceCost = (rings[2].ringSourceCost * 1.15) + (1 * rings[2].ringLevel);
+    rings[2].ringAnimalCost = (rings[2].ringAnimalCost * 1.15) + (1 * rings[2].ringLevel);
   }
 }
 
 const upgradeRingSpeedFour = () => {
-  if (player.source > rings[3].ringSourceCost) {
-    player.source -= rings[3].ringSourceCost;
+  if (player.animal > rings[3].ringAnimalCost) {
+    player.animal -= rings[3].ringAnimalCost;
     rings[3].rotationalSpeedX += 0.015;
 
     rings[3].ringLevel = 1;
-    rings[3].ringSourceCost = (rings[3].ringSourceCost * 1.15) + (1 * rings[3].ringLevel);
+    rings[3].ringAnimalCost = (rings[3].ringAnimalCost * 1.15) + (1 * rings[3].ringLevel);
   }
 }
 
 const upgradeRingSpeedFive = () => {
-  if (player.source > rings[4].ringSourceCost) {
-    player.source -= rings[4].ringSourceCost;
+  if (player.animal > rings[4].ringAnimalCost) {
+    player.animal -= rings[4].ringAnimalCost;
     rings[4].rotationalSpeedX += 0.015;
 
     rings[4].ringLevel = 1;
-    rings[4].ringSourceCost = (rings[4].ringSourceCost * 1.15) + (1 * rings[4].ringLevel);
+    rings[4].ringAnimalCost = (rings[4].ringAnimalCost * 1.15) + (1 * rings[4].ringLevel);
   }
 }
 
 const upgradeRingSpeedSix = () => {
-  if (player.source > rings[5].ringSourceCost) {
-    player.source -= rings[5].ringSourceCost;
+  if (player.animal > rings[5].ringAnimalCost) {
+    player.animal -= rings[5].ringAnimalCost;
     rings[5].rotationalSpeedX += 0.015;
 
     rings[5].ringLevel = 1;
-    rings[5].ringSourceCost = (rings[5].ringSourceCost * 1.15) + (1 * rings[5].ringLevel);
-  }
-}
-
-const upgradeRingSpeedSeven = () => {
-  if (player.source > rings[6].ringSourceCost) {
-    player.source -= rings[6].ringSourceCost;
-    rings[6].rotationalSpeedX += 0.015;
-
-    rings[6].ringLevel = 1;
-    rings[6].ringSourceCost = (rings[6].ringSourceCost * 1.15) + (1 * rings[6].ringLevel);
-  }
-}
-
-const upgradeRingSpeedEight = () => {
-  if (player.source > rings[7].ringSourceCost) {
-    player.source -= rings[7].ringSourceCost;
-    rings[7].rotationalSpeedX += 0.015;
-
-    rings[7].ringLevel = 1;
-    rings[7].ringSourceCost = (rings[7].ringSourceCost * 1.15) + (1 * rings[7].ringLevel);
-  }
-}
-
-const upgradeRingSpeedNine = () => {
-  if (player.source > rings[8].ringSourceCost) {
-    player.source -= rings[8].ringSourceCost;
-    rings[8].rotationalSpeedX += 0.015;
-
-    rings[8].ringLevel = 1;
-    rings[8].ringSourceCost = (rings[8].ringSourceCost * 1.15) + (1 * rings[8].ringLevel);
-  }
-}
-
-
-const upgradeRingSpeedTen = () => {
-  if (player.source > rings[9].ringSourceCost) {
-    player.source -= rings[9].ringSourceCost;
-    rings[9].rotationalSpeedX += 0.015;
-
-    rings[9].ringLevel = 1;
-    rings[9].ringSourceCost = (rings[9].ringSourceCost * 1.15) + (1 * rings[9].ringLevel);
+    rings[5].ringAnimalCost = (rings[5].ringAnimalCost * 1.15) + (1 * rings[5].ringLevel);
   }
 }
 /**
@@ -205,7 +164,7 @@ const addNewRingToArray = () => {
 // Torus One
 
 const runTorusOne = () => {
-  if (player.source >= rings[0].ringSourceCost) {
+  if (player.animal >= rings[0].ringAnimalCost) {
     // This is the standard "Create-an-Object" template
     let mainTorus = new THREE.TorusGeometry(5, .35, 4, 100);
     let torus = new THREE.Mesh(mainTorus, material);
@@ -224,7 +183,7 @@ const runTorusOne = () => {
 // Torus Two
 
 const runTorusTwo = () => {
-  if (player.source >= rings[1].ringSourceCost) {
+  if (player.animal >= rings[1].ringAnimalCost) {
     // This is the standard "Create-an-Object" template
     let mainTorusTwo = new THREE.TorusGeometry(9, .65, 4, 100);
     let torusTwo = new THREE.Mesh(mainTorusTwo, material);
@@ -242,7 +201,7 @@ const runTorusTwo = () => {
 // Torus Three
 
 const runTorusThree = () => {
-  if (player.source >= rings[2].ringSourceCost) {
+  if (player.animal >= rings[2].ringAnimalCost) {
     // This is the standard "Create-an-Object" template
     let mainTorusThree = new THREE.TorusGeometry(13, .95, 4, 100);
     let torusThree = new THREE.Mesh(mainTorusThree, material);
@@ -264,7 +223,7 @@ const runTorusThree = () => {
 // Torus Four
 
 const runTorusFour = () => {
-  if (player.source >= rings[3].ringSourceCost) {
+  if (player.animal >= rings[3].ringAnimalCost) {
     // This is the standard "Create-an-Object" template
     let mainTorusFour = new THREE.TorusGeometry(17, 1.25, 4, 100);
     let torusFour = new THREE.Mesh(mainTorusFour, material);
@@ -286,7 +245,7 @@ const runTorusFour = () => {
 // Torus Five
 
 const runTorusFive = () => {
-  if (player.source >= rings[4].ringSourceCost) {
+  if (player.animal >= rings[4].ringAnimalCost) {
     // This is the standard "Create-an-Object" template
     let mainTorusFive = new THREE.TorusGeometry(24, 1.55, 5, 100);
     let torusFive = new THREE.Mesh(mainTorusFive, material);
@@ -312,7 +271,7 @@ const runTorusFive = () => {
 // Torus Six
 
 const runTorusSix = () => {
-  if (player.source >= rings[5].ringSourceCost) {
+  if (player.animal >= rings[5].ringAnimalCost) {
     // This is the standard "Create-an-Object" template
     let mainTorusSix = new THREE.TorusGeometry(31, 1.85, 6, 100);
     let torusSix = new THREE.Mesh(mainTorusSix, material);
@@ -338,7 +297,7 @@ const runTorusSix = () => {
 // Torus Seven
 
 const runTorusSeven = () => {
-  if (player.source >= rings[6].ringSourceCost) {
+  if (player.animal >= rings[6].ringAnimalCost) {
     // This is the standard "Create-an-Object" template
     let mainTorusSeven = new THREE.TorusGeometry(37, 2.15, 7, 100);
     let torusSeven = new THREE.Mesh(mainTorusSeven, material);
@@ -364,7 +323,7 @@ const runTorusSeven = () => {
 // Torus Eight
 
 const runTorusEight = () => {
-  if (player.source >= rings[7].ringSourceCost) {
+  if (player.animal >= rings[7].ringAnimalCost) {
     // This is the standard "Create-an-Object" template
     let mainTorusEight = new THREE.TorusGeometry(45, 2.55, 8, 100);
     let torusEight = new THREE.Mesh(mainTorusEight, material);
@@ -391,7 +350,7 @@ const runTorusEight = () => {
 // Torus Nine
 
 const runTorusNine = () => {
-  if (player.source >= rings[8].ringSourceCost) {
+  if (player.animal >= rings[8].ringAnimalCost) {
     // This is the standard "Create-an-Object" template
     let mainTorusNine = new THREE.TorusGeometry(55, 2.85, 9, 100);
     let torusNine = new THREE.Mesh(mainTorusNine, material);
@@ -417,7 +376,7 @@ const runTorusNine = () => {
 // Torus Ten
 
 const runTorusTen = () => {
-  if (player.source >= rings[9].ringSourceCost) {
+  if (player.animal >= rings[9].ringAnimalCost) {
     // This is the standard "Create-an-Object" template
     let mainTorusTen = new THREE.TorusGeometry(66, 3.15, 10, 100);
     let torusTen = new THREE.Mesh(mainTorusTen, material);
@@ -553,6 +512,52 @@ $('.menuTable').hover(
   function () {
     setTimeout(() => {
       $(this).removeClass("custom-heading-1")
-    }, 2500);
+    }, 3000);
   }
 );
+
+/**
+ * Check For Purchase Availability
+ */
+
+const checkForPurchaseAvailability = () => {
+  if (player.animal >= rings[0].ringAnimalCost) {
+    const x = document.getElementById("animalInfoOne").style.color = 'white';
+  } else {
+    const x = document.getElementById("animalInfoOne").style.color = 'red';
+  }
+
+  if (player.animal >= rings[1].ringAnimalCost) {
+    const x = document.getElementById("animalInfoTwo").style.color = 'white';
+  } else {
+    const x = document.getElementById("animalInfoTwo").style.color = 'red';
+  }
+
+  if (player.animal >= rings[2].ringAnimalCost) {
+    const x = document.getElementById("animalInfoThree").style.color = 'white';
+  } else {
+    const x = document.getElementById("animalInfoThree").style.color = 'red';
+  }
+
+  if (player.animal >= rings[3].ringAnimalCost) {
+    const x = document.getElementById("animalInfoFour").style.color = 'white';
+  } else {
+    const x = document.getElementById("animalInfoFour").style.color = 'red';
+  }
+
+  if (player.animal >= rings[4].ringAnimalCost) {
+    const x = document.getElementById("animalInfoFive").style.color = 'white';
+  } else {
+    const x = document.getElementById("animalInfoFive").style.color = 'red';
+  }
+
+  if (player.animal >= rings[5].ringAnimalCost) {
+    const x = document.getElementById("animalInfoSix").style.color = 'white';
+  } else {
+    const x = document.getElementById("animalInfoSix").style.color = 'red';
+  }
+
+  console.log('ran')
+}
+
+setInterval(checkForPurchaseAvailability, 500);

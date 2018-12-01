@@ -17,14 +17,15 @@
 
     <!-- UI Sections -->
     <div id="header">
-      <h1 class="largeText" id="gameTitle">Idle Rings</h1>
-      <h3 class="mediumText" id="version">Version 0.01a</h3>
+      <h1 class="largeText" id="gameTitle">Idle SNACKRIFICE!
+        <span class="smallText" id="version">V 0.01A</span>
+      </h1>
 
-      <p id="mainSourceInfo"></p>
     </div>
 
     <div id="mainSectionLeft">
-
+      <p id="mainAnimalInfo"></p>
+      <p id="mainAnimalInfoTwo"></p>
     </div>
 
     <div id="mainSectionRight">
@@ -41,93 +42,63 @@
     <div id="menuSystemMainOptions">
       <table id="skillsTable">
         <tr id="skillsTableRow">
-          <th class="menuTable" id="menuTabOne" onclick='switchMenuOne();'>Energy</th>
-          <th class="menuTable" id="menuTabTwo" onclick='switchMenuTwo();'>???</th>
+          <th class="menuTable" id="menuTabOne" onclick='switchMenuOne();'>ANIMAL SNACKRIFICES</th>
+          <th class="menuTable" id="menuTabTwo" onclick='switchMenuTwo();'>HUMAN SNACKRIFICES</th>
           <th class="menuTable" id="menuTabThree" onclick='switchMenuThree();'>???</th>
           <th class="menuTable" id="menuTabFour" onclick='switchMenuFour();'>Settings</th>
         </tr>
       </table>
     </div>
 
-    <!-- Energy -->
+    <!-- Animal Snackrifices -->
     <div id="menuSystemOne">
       <div id="mainSectionBottom">
         <table id="ringSections">
           <tr>
             <td class="ringSection ringSectionOne showTextSlowly">
-              <p class="showTextSlowly" id="sourceInfoOne"></p>
-              <div onclick="addNewRingToArray()">Add</div>
-              <div onclick="upgradeRingSpeedOne()">Upgrade</div>
-              <!-- TODO: SWAP ADD AND UPGRADE VISUALLY SO THEY TAKE UP HALF THE SPACE -->
+              <p class="showTextSlowly" id="animalInfoOne" class="hide"></p>
+              <div id="checkAvailabilityOneA" onclick="addNewRingToArray()">Add</div>
+              <div id="checkAvailabilityOneB" onclick="upgradeRingSpeedOne()">Upgrade</div>
             </td>
             <td class="ringSection ringSectionTwo showTextSlowly">
-              <p class="showTextSlowly" id="sourceInfoTwo"></p>
-              <div onclick="addNewRingToArray()">Add</div>
-              <div onclick="upgradeRingSpeedTwo()">Upgrade</div>
-              <!-- TODO: SWAP ADD AND UPGRADE VISUALLY SO THEY TAKE UP HALF THE SPACE -->
+              <p class="showTextSlowly" id="animalInfoTwo" class="hide"></p>
+              <div id="checkAvailabilityTwoA" onclick="addNewRingToArray()">Add</div>
+              <div id="checkAvailabilityTwoB" onclick="upgradeRingSpeedTwo()">Upgrade</div>
             </td>
             <td class="ringSection ringSectionThree showTextSlowly">
-              <p class="showTextSlowly" id="sourceInfoThree"></p>
-              <div onclick="addNewRingToArray()">Add</div>
-              <div onclick="upgradeRingSpeedThree()">Upgrade</div>
-              <!-- TODO: SWAP ADD AND UPGRADE VISUALLY SO THEY TAKE UP HALF THE SPACE -->
-            </td>
-            <td class="ringSection ringSectionFour showTextSlowly">
-              <p class="showTextSlowly" id="sourceInfoFour"></p>
-              <div onclick="addNewRingToArray()">Add</div>
-              <div onclick="upgradeRingSpeedFour()">Upgrade</div>
-              <!-- TODO: SWAP ADD AND UPGRADE VISUALLY SO THEY TAKE UP HALF THE SPACE -->
-            </td>
-            <td class="ringSection ringSectionFive showTextSlowly">
-              <p class="showTextSlowly" id="sourceInfoFive"></p>
-              <div onclick="addNewRingToArray()">Add</div>
-              <div onclick="upgradeRingSpeedFive()">Upgrade</div>
-              <!-- TODO: SWAP ADD AND UPGRADE VISUALLY SO THEY TAKE UP HALF THE SPACE -->
-            </td>
-            <td class="ringSection ringSectionSix showTextSlowly">
-              <p class="showTextSlowly" id="sourceInfoSix"></p>
-              <div onclick="addNewRingToArray()">Add</div>
-              <div onclick="upgradeRingSpeedSix()">Upgrade</div>
-              <!-- TODO: SWAP ADD AND UPGRADE VISUALLY SO THEY TAKE UP HALF THE SPACE -->
-            </td>
-            <td class="ringSection ringSectionSeven showTextSlowly">
-              <p class="showTextSlowly" id="sourceInfoSeven"></p>
-              <div onclick="addNewRingToArray()">Add</div>
-              <div onclick="upgradeRingSpeedSeven()">Upgrade</div>
-              <!-- TODO: SWAP ADD AND UPGRADE VISUALLY SO THEY TAKE UP HALF THE SPACE -->
-            </td>
-            <td class="ringSection ringSectionEight showTextSlowly">
-              <p class="showTextSlowly" id="sourceInfoEight"></p>
-              <div onclick="addNewRingToArray()">Add</div>
-              <div onclick="upgradeRingSpeedEight()">Upgrade</div>
-              <!-- TODO: SWAP ADD AND UPGRADE VISUALLY SO THEY TAKE UP HALF THE SPACE -->
-            </td>
-            <td class="ringSection ringSectionNine showTextSlowly">             
-              <p class="showTextSlowly" id="sourceInfoNine"></p>
-              <div onclick="addNewRingToArray()">Add</div>
-              <div onclick="upgradeRingSpeedNine()">Upgrade</div>
-              <!-- TODO: SWAP ADD AND UPGRADE VISUALLY SO THEY TAKE UP HALF THE SPACE --></td>
-            <td class="ringSection ringSectionTen showTextSlowly">
-                <p class="showTextSlowly" id="sourceInfoTen"></p>
-                <div onclick="addNewRingToArray()">Add</div>
-                <div onclick="upgradeRingSpeedTen()">Upgrade</div>
-                <!-- TODO: SWAP ADD AND UPGRADE VISUALLY SO THEY TAKE UP HALF THE SPACE -->
+              <p class="showTextSlowly hide" id="animalInfoThree"></p>
+              <div id="checkAvailabilityThreeA" onclick="addNewRingToArray()">Add</div>
+              <div id="checkAvailabilityThreeB" onclick="upgradeRingSpeedThree()">Upgrade</div>
             </td>
           </tr>
         </table>
       </div>
     </div>
 
-    <!-- Prestige -->
+    <!-- Human Snackrifices -->
     <div id="menuSystemTwo">
-
-
-      <!-- Button and Control Section -->
-      <div id="buttonAddTorus">
-        <button onclick="addNewRingToArray()">Add Energy Ring</button>
-        <button onclick="removeAllObjectsExceptMainSphere()">Remove All Energy Rings</button>
-        <button onclick="upgradeRingSpeed()">Upgrade Ring One</button>
-      </div>
+        <table id="ringSectionsTwo">
+            <tr>
+              <td class="ringSection ringSectionFour showTextSlowly">
+                <p class="showTextSlowly hide checkAvailabilityFourA" id="animalInfoFour"></p>
+                <div id="checkAvailabilityFourA" onclick="addNewRingToArray()">Add</div>
+                <div id="checkAvailabilityFourB" onclick="upgradeRingSpeedFour()">Upgrade</div>
+  
+              </td>
+              <td class="ringSection ringSectionFive showTextSlowly">
+                <p class="showTextSlowly hide" id="animalInfoFive"></p>
+                <div id="checkAvailabilityFiveA" onclick="addNewRingToArray()">Add</div>
+                <div id="checkAvailabilityFiveB" onclick="upgradeRingSpeedFive()">Upgrade</div>
+  
+              </td>
+              <td class="ringSection ringSectionSix showTextSlowly">
+                <p class="showTextSlowly hide" id="animalInfoSix"></p>
+                <div id="checkAvailabilitySixA" onclick="addNewRingToArray()">Add</div>
+                <div id="checkAvailabilitySixB" onclick="upgradeRingSpeedSix()">Upgrade</div>
+  
+              </td>
+            </tr>
+          </table>
 
 
     </div>
@@ -145,7 +116,7 @@
     </div>
   </div>
 
-  <!-- Script Sources -->
+  <!-- Script Animals -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.min.js"></script>

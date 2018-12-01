@@ -12,23 +12,23 @@
   }
 
   30% {
-    color: red;
+    color: white;
   }
 
   50% {
-    color: red;
+    color: white;
   }
 
   70% {
-    color: red;
+    color: white;
   }
 
   90% {
-    color: red;
+    color: white;
   }
 
   100% {
-    color: red;
+    color: white;
   }
 }
 
@@ -78,12 +78,12 @@
 
 @keyframes colorChange {
   0% {
-    color: lightsalmon;
+    color: red;
     text-shadow:
-      2px -2px 0 lightsalmon,
+      2px -2px 0 red,
       -2px 2px 2px gold,
       -4px 4px 2px yellow,
-      -6px 6px 2px green,
+      -6px 6px 2px aliceblue,
       -8px 8px 2px lightblue;
     /* -10px 20px 2px palevioletred;  */
   }
@@ -92,10 +92,10 @@
     color: palevioletred;
     text-shadow:
       2px -2px 0 palevioletred,
-      -2px 2px 2px lightsalmon,
+      -2px 2px 2px red,
       -4px 4px 2px gold,
       -6px 6px 2px yellow,
-      -8px 8px 2px green;
+      -8px 8px 2px aliceblue;
     /* -10px 20px 2px lightblue;  */
   }
 
@@ -104,19 +104,19 @@
     text-shadow:
       2px -2px 0 lightblue,
       -2px 2px 2px palevioletred,
-      -4px 4px 2px lightsalmon,
+      -4px 4px 2px red,
       -6px 6px 2px gold,
       -8px 8px 2px yellow;
-    /* -10px 20px 2px green;  */
+    /* -10px 20px 2px aliceblue;  */
   }
 
   54% {
-    color: green;
+    color: aliceblue;
     text-shadow:
-      2px -2px 0 green,
+      2px -2px 0 aliceblue,
       -2px 2px 2px lightblue,
       -4px 4px 2px palevioletred,
-      -6px 6px 2px lightsalmon,
+      -6px 6px 2px red,
       -8px 8px 2px gold;
     /* -10px 20px 2px yellow;   */
   }
@@ -125,10 +125,10 @@
     color: yellow;
     text-shadow:
       2px -2px 0 yellow,
-      -2px 2px 2px green,
+      -2px 2px 2px aliceblue,
       -4px 4px 2px lightblue,
       -6px 6px 2px palevioletred,
-      -8px 8px 2px lightsalmon;
+      -8px 8px 2px red;
     /* -10px 20px 2px gold;   */
   }
 
@@ -137,19 +137,19 @@
     text-shadow:
       2px -2px 0 gold,
       -2px 2px 2px yellow,
-      -4px 4px 2px green,
+      -4px 4px 2px aliceblue,
       -6px 6px 2px lightblue,
       -8px 8px 2px palevioletred;
-    /* -10px 20px 2px lightsalmon;     */
+    /* -10px 20px 2px red;     */
   }
 
   100% {
-    color: lightsalmon;
+    color: red;
     text-shadow:
-      2px -2px 0 lightsalmon,
+      2px -2px 0 red,
       -2px 2px 2px gold,
       -4px 4px 2px yellow,
-      -6px 6px 2px green,
+      -6px 6px 2px aliceblue,
       -8px 8px 2px lightblue;
     /* -10px 20px 2px palevioletred;  */
   }
@@ -159,10 +159,10 @@
   text-align: center;
   transition: text-shadow 2s;
   text-shadow:
-    1px -1px 0 lightsalmon,
+    1px -1px 0 red,
     -1px 2px 1px gold,
     -2px 4px 1px yellow,
-    -3px 6px 1px green,
+    -3px 6px 1px aliceblue,
     -4px 8px 1px lightblue,
     -5px 10px 1px palevioletred;
   animation: colorChange 3s linear;
@@ -174,8 +174,9 @@
 
 #menuSystemMainOptions {
   position: absolute;
-  top: 392.5px;
+  top: 546.5px;
   left: 0px;
+  z-index: 10;
 }
 
 #menuSystemMainOptions th {
@@ -299,7 +300,7 @@ p {
 }
 
 .flickerOn {
-  animation: flickerText 3s ease-out 1, fadeOut 5s linear 1;
+  /* animation: flickerText 3s ease-out 1, fadeOut 5s linear 1; */
   /* animation-name: flickerText, fadeOut;
   animation-duration: 2s, 15s;
   animation-timing-function: ease-out;
@@ -307,11 +308,11 @@ p {
 }
 
 .flickerOnTwo {
-  animation: flickerText 36s ease-out 1;
+  /* animation: flickerText 36s ease-out 1; */
 }
 
 .flickerOnThree {
-  animation: flickerText 81s ease-out 1;
+  /* animation: flickerText 81s ease-out 1; */
 }
 
 /*
@@ -390,19 +391,19 @@ p {
 .largeText {
   font-size: 38px;
   color: white;
-  text-shadow: 2px 2px 2px black;
+  text-shadow: 1px 1px 1px rgba(190, 3, 3, 0.829);
 }
 
 .mediumText {
   font-size: 22px;
   color: white;
-  text-shadow: 1px 1px 1px black;
+  text-shadow: 1px 1px 1px rgba(190, 3, 3, 0.829);
 }
 
 .smallText {
   font-size: 12px;
   color: white;
-  text-shadow: 1px 1px 1px black;
+  text-shadow: 1px 1px 1px rgba(190, 3, 3, 0.829);
 }
 
 .startHidden {
@@ -410,9 +411,14 @@ p {
 }
 
 .showTextSlowly {
-  animation: showTextSlowly 6s linear;
+  /* animation: showTextSlowly 6s linear; */
 }
 
+#mainAnimalInfo, #mainAnimalInfoTwo{
+  color: white;
+  text-shadow: 1px 1px 1px rgba(190, 3, 3, 0.829);
+  text-decoration: underline;
+}
 /** 
 *
 * Ring Sections
@@ -425,10 +431,24 @@ p {
   height: 145px;
 }
 
-#ringSections td {
-  width: 75.5px;
+#ringSectionsTwo tr {
+  display: inline-flex;
+  width: 795px;
   height: 145px;
 }
+
+#ringSections td {
+  width: 33%;
+  height: 145px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#ringSectionsTwo td {
+  width: 33%;
+  height: 145px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
 
 .ringSectionTwo,
 .ringSectionThree,
@@ -439,17 +459,27 @@ p {
 .ringSectionEight,
 .ringSectionNine,
 .ringSectionTen {
-  border-left: 1px solid black;
-  border-right: 1px solid black;
+  border-left: 1px solid aliceblue;
+  border-right: 1px solid aliceblue;
   vertical-align: top;
   margin-top: -20px;
   padding-bottom: 24px;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .ringSectionOne {
   vertical-align: top;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
+  border-left: 1px solid aliceblue;
+  border-right: 1px solid aliceblue;
   margin-top: -20px;
   padding-bottom: 24px;
+}
+
+#hide {
+  display: none;
+}
+
+#animalInfoOne, #animalInfoTwo, #animalInfoThree,
+#animalInfoFour, #animalInfoFive {
+  /* color: white; */
 }

@@ -14,8 +14,9 @@ const player = {
   name: '',
   id: '',
 
-  //Resources
-  source: 1,
+  //Reanimals
+  animal: 1,
+  human: 1,
 
   //Rings
   currentRingCount: 1,
@@ -27,133 +28,133 @@ const player = {
 
 const rings = [{
   ringNumber: 1,
-  ringSourceCost: 1,
+  ringAnimalCost: 1,
   ringColorOne: '',
   ringColorTwo: '',
   ringColorThree: '',
   ringLevel: 0,
   rotationalSpeedX: Math.PI / 1080,
   rotationalSpeedY: Math.PI / 1080,
-  addSource() {
-    player.source += (this.rotationalSpeedX) + (this.rotationalSpeedY)
+  addAnimal() {
+    player.animal += (this.rotationalSpeedX) + (this.rotationalSpeedY)
   },
 
 }, {
   ringNumber: 2,
-  ringSourceCost: 10,
+  ringAnimalCost: 10,
   ringColorOne: '',
   ringColorTwo: '',
   ringColorThree: '',
   ringLevel: 0,
   rotationalSpeedX: Math.PI / 1080,
   rotationalSpeedY: 0,
-  addSource() {
-    player.source += (this.rotationalSpeedX) + (this.rotationalSpeedY)
+  addAnimal() {
+    player.animal += (this.rotationalSpeedX) + (this.rotationalSpeedY)
   },
 
 }, {
   ringNumber: 3,
-  ringSourceCost: 25,
+  ringAnimalCost: 25,
   ringColorOne: '',
   ringColorTwo: '',
   ringColorThree: '',
   ringLevel: 0,
   rotationalSpeedX: Math.PI / 1080,
   rotationalSpeedY: 0,
-  addSource() {
-    player.source += (this.rotationalSpeedX) + (this.rotationalSpeedY)
+  addAnimal() {
+    player.animal += (this.rotationalSpeedX) + (this.rotationalSpeedY)
   },
 
 }, {
   ringNumber: 4,
-  ringSourceCost: 100,
+  ringAnimalCost: 100,
   ringColorOne: '',
   ringColorTwo: '',
   ringColorThree: '',
   ringLevel: 0,
   rotationalSpeedX: Math.PI / 1080,
   rotationalSpeedY: 0,
-  addSource() {
-    player.source += (this.rotationalSpeedX) + (this.rotationalSpeedY)
+  addAnimal() {
+    player.animal += (this.rotationalSpeedX) + (this.rotationalSpeedY)
   },
 
 }, {
   ringNumber: 5,
-  ringSourceCost: 250,
+  ringAnimalCost: 250,
   ringColorOne: '',
   ringColorTwo: '',
   ringColorThree: '',
   ringLevel: 0,
   rotationalSpeedX: Math.PI / 1080,
   rotationalSpeedY: 0,
-  addSource() {
-    player.source += (this.rotationalSpeedX) + (this.rotationalSpeedY)
+  addAnimal() {
+    player.animal += (this.rotationalSpeedX) + (this.rotationalSpeedY)
   },
 
 }, {
   ringNumber: 6,
-  ringSourceCost: 1000,
+  ringAnimalCost: 1000,
   ringColorOne: '',
   ringColorTwo: '',
   ringColorThree: '',
   ringLevel: 0,
   rotationalSpeedX: Math.PI / 1080,
   rotationalSpeedY: 0,
-  addSource() {
-    player.source += (this.rotationalSpeedX) + (this.rotationalSpeedY)
+  addAnimal() {
+    player.animal += (this.rotationalSpeedX) + (this.rotationalSpeedY)
   },
 
 }, {
   ringNumber: 7,
-  ringSourceCost: 5000,
+  ringAnimalCost: 5000,
   ringColorOne: '',
   ringColorTwo: '',
   ringColorThree: '',
   ringLevel: 0,
   rotationalSpeedX: Math.PI / 1080,
   rotationalSpeedY: 0,
-  addSource() {
-    player.source += (this.rotationalSpeedX) + (this.rotationalSpeedY)
+  addAnimal() {
+    player.animal += (this.rotationalSpeedX) + (this.rotationalSpeedY)
   },
 
 }, {
   ringNumber: 8,
-  ringSourceCost: 25000,
+  ringAnimalCost: 25000,
   ringColorOne: '',
   ringColorTwo: '',
   ringColorThree: '',
   ringLevel: 0,
   rotationalSpeedX: Math.PI / 1080,
   rotationalSpeedY: 0,
-  addSource() {
-    player.source += (this.rotationalSpeedX) + (this.rotationalSpeedY)
+  addAnimal() {
+    player.animal += (this.rotationalSpeedX) + (this.rotationalSpeedY)
   },
 
 }, {
   ringNumber: 9,
-  ringSourceCost: 100000,
+  ringAnimalCost: 100000,
   ringColorOne: '',
   ringColorTwo: '',
   ringColorThree: '',
   ringLevel: 0,
   rotationalSpeedX: Math.PI / 1080,
   rotationalSpeedY: 0,
-  addSource() {
-    player.source += (this.rotationalSpeedX) + (this.rotationalSpeedY)
+  addAnimal() {
+    player.animal += (this.rotationalSpeedX) + (this.rotationalSpeedY)
   },
 
 
 }, {
   ringNumber: 10,
-  ringSourceCost: 100000,
+  ringAnimalCost: 100000,
   ringColorOne: '',
   ringColorTwo: '',
   ringColorThree: '',
   ringLevel: 0,
   rotationalSpeedX: Math.PI / 1080,
   rotationalSpeedY: 0,
-  addSource() {
-    player.source += (this.rotationalSpeedX) + (this.rotationalSpeedY)
+  addAnimal() {
+    player.animal += (this.rotationalSpeedX) + (this.rotationalSpeedY)
   },
 
 }]
@@ -167,8 +168,8 @@ const enemy = {
 }
 
 const updateCam = {
-  cameraPerspectiveChange: 50,
-  cameraZPos: 50,
+  cameraPerspectiveChange: 5,
+  cameraZPos: 300,
 }
 
 const mainLights = {

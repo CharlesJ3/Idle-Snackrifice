@@ -6,10 +6,10 @@ const renderer = new THREE.WebGLRenderer({
 });
 
 renderer.setSize(800, 600);
-renderer.setClearColor('#fff', 0.1); // the default
+// renderer.setClearColor('#fff', 0.1); // the default
 
 // Configure renderer clear color
-renderer.setClearColor("lightgrey");
+renderer.setClearColor("black");
 
 //Camera
 const camera = new THREE.PerspectiveCamera(
@@ -24,7 +24,7 @@ camera.position.z = updateCam.cameraZPos;
 // Build the controls.
 var controls = new THREE.OrbitControls(camera);
 controls.autoRotate = true;
-controls.autoRotateSpeed = .05;
+controls.autoRotateSpeed = .025;
 controls.maxDistance = 800;
 controls.minDistance = 10;
 
@@ -88,86 +88,60 @@ sphere.position.y = 5;
 
 // Update Text Inside Game
 const updateText = () => {
-  document.querySelector('#mainSourceInfo').innerHTML = `
-  <span style="text-decoration: underline;">Source</span> 
+  document.querySelector('#mainAnimalInfo').innerHTML = `
+  Animal Bits 
   <br> 
-    ${(player.source).toFixed(1)} 
+    ${(player.animal).toFixed(1)} 
   `
 
-  //Source One
-  document.querySelector('#sourceInfoOne').innerHTML = `
-  <span style="text-decoration: underline;">Cost</span> 
-    <br> 
-      ${(rings[0].ringSourceCost).toFixed(1)}
-  `
-  //Source Two
-  document.querySelector('#sourceInfoTwo').innerHTML = `
-  <span style="text-decoration: underline;">Cost</span> 
-    <br> 
-      ${(rings[1].ringSourceCost).toFixed(1)}
+  document.querySelector('#mainAnimalInfoTwo').innerHTML = `
+  Human Chunks
+  <br> 
+    ${(player.human).toFixed(1)} 
   `
 
-  //Source Three
-  document.querySelector('#sourceInfoThree').innerHTML = `
-  <span style="text-decoration: underline;">Cost</span> 
+  //Animal One
+  document.querySelector('#animalInfoOne').innerHTML = `
+  Cost
     <br> 
-      ${(rings[2].ringSourceCost).toFixed(1)}
+      ${(rings[0].ringAnimalCost).toFixed(1)}
+  `
+  //Animal Two
+  document.querySelector('#animalInfoTwo').innerHTML = `
+  Cost
+    <br> 
+      ${(rings[1].ringAnimalCost).toFixed(1)}
   `
 
-  //Source Four
-  document.querySelector('#sourceInfoFour').innerHTML = `
-  <span style="text-decoration: underline;">Cost</span> 
+  //Animal Three
+  document.querySelector('#animalInfoThree').innerHTML = `
+  Cost
     <br> 
-      ${(rings[3].ringSourceCost).toFixed(1)}
+      ${(rings[2].ringAnimalCost).toFixed(1)}
   `
 
-  //Source Five
-  document.querySelector('#sourceInfoFive').innerHTML = `
-  <span style="text-decoration: underline;">Cost</span> 
+  //Human One
+  document.querySelector('#animalInfoFour').innerHTML = `
+  Cost
     <br> 
-      ${(rings[4].ringSourceCost).toFixed(1)}
+      ${(rings[3].ringAnimalCost).toFixed(1)}
   `
 
-  //Source Six
-  document.querySelector('#sourceInfoSix').innerHTML = `
-  <span style="text-decoration: underline;">Cost</span> 
+  //Animal Two
+  document.querySelector('#animalInfoFive').innerHTML = `
+  Cost
     <br> 
-      ${(rings[5].ringSourceCost).toFixed(1)}
+      ${(rings[4].ringAnimalCost).toFixed(1)}
   `
 
-  //Source Seven
-  document.querySelector('#sourceInfoSeven').innerHTML = `
-  <span style="text-decoration: underline;">Cost</span> 
+  //Human Three
+  document.querySelector('#animalInfoSix').innerHTML = `
+  Cost
     <br> 
-      ${(rings[6].ringSourceCost).toFixed(1)}
+      ${(rings[5].ringAnimalCost).toFixed(1)}
   `
-
-  //Source Eight
-  document.querySelector('#sourceInfoEight').innerHTML = `
-  <span style="text-decoration: underline;">Cost</span> 
-    <br> 
-      ${(rings[7].ringSourceCost).toFixed(1)}
-  `
-
-  //Source Nine
-  document.querySelector('#sourceInfoNine').innerHTML = `
-  <span style="text-decoration: underline;">Cost</span> 
-    <br> 
-      ${(rings[8].ringSourceCost).toFixed(1)}
-  `
-
-  //Source Ten
-  document.querySelector('#sourceInfoTen').innerHTML = `
-  <span style="text-decoration: underline;">Cost</span> 
-    <br> 
-      ${(rings[9].ringSourceCost).toFixed(1)}
-  `
-  // document.querySelector('#ringOne').innerHTML = `Ring One Cost: <br> ${(rings[0].ringSourceCost).toFixed(1)}`
+  // document.querySelector('#ringOne').innerHTML = `Ring One Cost: <br> ${(rings[0].ringAnimalCost).toFixed(1)}`
 }
-
-
-
-
 
 // RENDER LOOP 1
 requestAnimationFrame(render);
@@ -179,7 +153,7 @@ function render() {
     xa.rotation.x += rings[0].rotationalSpeedX;
     xa.rotation.y += rings[0].rotationalSpeedY;
 
-    rings[0].addSource();
+    rings[0].addAnimal();
   }
 
   if (player.torusTwoActivated) {
@@ -187,7 +161,7 @@ function render() {
     xb.rotation.x += rings[1].rotationalSpeedX;
     xb.rotation.y += rings[1].rotationalSpeedY;
 
-    rings[1].addSource();
+    rings[1].addAnimal();
   }
 
   if (player.torusThreeActivated) {
@@ -195,7 +169,7 @@ function render() {
     xc.rotation.x += rings[2].rotationalSpeedX;
     xc.rotation.y += rings[2].rotationalSpeedY;
 
-    rings[2].addSource();
+    rings[2].addAnimal();
   }
 
   if (player.torusFourActivated) {
@@ -203,7 +177,7 @@ function render() {
     xd.rotation.x += rings[3].rotationalSpeedX;
     xd.rotation.y += rings[3].rotationalSpeedY;
 
-    rings[3].addSource();
+    rings[3].addAnimal();
   }
 
   if (player.torusFiveActivated) {
@@ -211,7 +185,7 @@ function render() {
     xe.rotation.x += rings[4].rotationalSpeedX;
     xe.rotation.y += rings[4].rotationalSpeedY;
 
-    rings[4].addSource();
+    rings[4].addAnimal();
   }
 
   if (player.torusSixActivated) {
@@ -219,7 +193,7 @@ function render() {
     xf.rotation.x += rings[5].rotationalSpeedX;
     xf.rotation.y += rings[5].rotationalSpeedY;
 
-    rings[5].addSource();
+    rings[5].addAnimal();
   }
 
   if (player.torusSevenActivated) {
@@ -227,7 +201,7 @@ function render() {
     xg.rotation.x += rings[6].rotationalSpeedX;
     xg.rotation.y += rings[6].rotationalSpeedY;
 
-    rings[6].addSource();
+    rings[6].addAnimal();
   }
 
   if (player.torusEightActivated) {
@@ -235,7 +209,7 @@ function render() {
     xh.rotation.x += rings[7].rotationalSpeedX;
     xh.rotation.y += rings[7].rotationalSpeedY;
 
-    rings[7].addSource();
+    rings[7].addAnimal();
   }
 
   if (player.torusNineActivated) {
@@ -243,7 +217,7 @@ function render() {
     xi.rotation.x += rings[8].rotationalSpeedX;
     xi.rotation.y += rings[8].rotationalSpeedY;
 
-    rings[8].addSource();
+    rings[8].addAnimal();
   }
 
   if (player.torusTenActivated) {
@@ -251,7 +225,7 @@ function render() {
     xj.rotation.x += rings[9].rotationalSpeedX;
     xj.rotation.y += rings[9].rotationalSpeedY;
 
-    rings[9].addSource();
+    rings[9].addAnimal();
   }
 
   controls.update();
