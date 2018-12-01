@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Idle Rings</title>
+  <link type="text/css" href="styles/styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Main Battle Area -->
+  <div id="wrapper">
+    <canvas id="battleArea"></canvas>
+
+    <!-- UI Sections -->
+    <div id="header">
+      <h1 class="largeText" id="gameTitle">Idle Rings</h1>
+      <h3 class="mediumText" id="version">Version 0.01a</h3>
+
+      <p id="mainSourceInfo"></p>
+    </div>
+
+    <div id="mainSectionLeft">
+
+    </div>
+
+    <div id="mainSectionRight">
+
+
+    </div>
+
+    <div id="mainSectionTop">
+
+
+    </div>
+
+    <!-- Menu System -->
+    <div id="menuSystemMainOptions">
+      <table id="skillsTable">
+        <tr id="skillsTableRow">
+          <th class="menuTable" id="menuTabOne" onclick='switchMenuOne();'>Energy</th>
+          <th class="menuTable" id="menuTabTwo" onclick='switchMenuTwo();'>???</th>
+          <th class="menuTable" id="menuTabThree" onclick='switchMenuThree();'>???</th>
+          <th class="menuTable" id="menuTabFour" onclick='switchMenuFour();'>Settings</th>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Energy -->
+    <div id="menuSystemOne">
+      <div id="mainSectionBottom">
+        <table id="ringSections">
+          <tr>
+            <td class="ringSection ringSectionOne showTextSlowly">
+              <p class="showTextSlowly" id="sourceInfoOne"></p>
+              <div onclick="addNewRingToArray()">Add</div>
+              <div onclick="upgradeRingSpeedOne()">Upgrade</div>
+              <!-- TODO: SWAP ADD AND UPGRADE VISUALLY SO THEY TAKE UP HALF THE SPACE -->
+            </td>
+            <td class="ringSection ringSectionTwo showTextSlowly">
+              <p class="showTextSlowly" id="sourceInfoTwo"></p>
+              <div onclick="addNewRingToArray()">Add</div>
+              <div onclick="upgradeRingSpeedTwo()">Upgrade</div>
+              <!-- TODO: SWAP ADD AND UPGRADE VISUALLY SO THEY TAKE UP HALF THE SPACE -->
+            </td>
+            <td class="ringSection ringSectionThree showTextSlowly">
+              <p class="showTextSlowly" id="sourceInfoThree"></p>
+              <div onclick="addNewRingToArray()">Add</div>
+              <div onclick="upgradeRingSpeedThree()">Upgrade</div>
+              <!-- TODO: SWAP ADD AND UPGRADE VISUALLY SO THEY TAKE UP HALF THE SPACE -->
+            </td>
+            <td class="ringSection ringSectionFour showTextSlowly">
+              <p class="showTextSlowly" id="sourceInfoFour"></p>
+              <div onclick="addNewRingToArray()">Add</div>
+              <div onclick="upgradeRingSpeedFour()">Upgrade</div>
+              <!-- TODO: SWAP ADD AND UPGRADE VISUALLY SO THEY TAKE UP HALF THE SPACE -->
+            </td>
+            <td class="ringSection ringSectionFive showTextSlowly">
+              <p class="showTextSlowly" id="sourceInfoFive"></p>
+              <div onclick="addNewRingToArray()">Add</div>
+              <div onclick="upgradeRingSpeedFive()">Upgrade</div>
+              <!-- TODO: SWAP ADD AND UPGRADE VISUALLY SO THEY TAKE UP HALF THE SPACE -->
+            </td>
+            <td class="ringSection ringSectionSix showTextSlowly">
+              <p class="showTextSlowly" id="sourceInfoSix"></p>
+              <div onclick="addNewRingToArray()">Add</div>
+              <div onclick="upgradeRingSpeedSix()">Upgrade</div>
+              <!-- TODO: SWAP ADD AND UPGRADE VISUALLY SO THEY TAKE UP HALF THE SPACE -->
+            </td>
+            <td class="ringSection ringSectionSeven showTextSlowly">
+              <p class="showTextSlowly" id="sourceInfoSeven"></p>
+              <div onclick="addNewRingToArray()">Add</div>
+              <div onclick="upgradeRingSpeedSeven()">Upgrade</div>
+              <!-- TODO: SWAP ADD AND UPGRADE VISUALLY SO THEY TAKE UP HALF THE SPACE -->
+            </td>
+            <td class="ringSection ringSectionEight showTextSlowly">
+              <p class="showTextSlowly" id="sourceInfoEight"></p>
+              <div onclick="addNewRingToArray()">Add</div>
+              <div onclick="upgradeRingSpeedEight()">Upgrade</div>
+              <!-- TODO: SWAP ADD AND UPGRADE VISUALLY SO THEY TAKE UP HALF THE SPACE -->
+            </td>
+            <td class="ringSection ringSectionNine showTextSlowly">             
+              <p class="showTextSlowly" id="sourceInfoNine"></p>
+              <div onclick="addNewRingToArray()">Add</div>
+              <div onclick="upgradeRingSpeedNine()">Upgrade</div>
+              <!-- TODO: SWAP ADD AND UPGRADE VISUALLY SO THEY TAKE UP HALF THE SPACE --></td>
+            <td class="ringSection ringSectionTen showTextSlowly">
+                <p class="showTextSlowly" id="sourceInfoTen"></p>
+                <div onclick="addNewRingToArray()">Add</div>
+                <div onclick="upgradeRingSpeedTen()">Upgrade</div>
+                <!-- TODO: SWAP ADD AND UPGRADE VISUALLY SO THEY TAKE UP HALF THE SPACE -->
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- Prestige -->
+    <div id="menuSystemTwo">
+
+
+      <!-- Button and Control Section -->
+      <div id="buttonAddTorus">
+        <button onclick="addNewRingToArray()">Add Energy Ring</button>
+        <button onclick="removeAllObjectsExceptMainSphere()">Remove All Energy Rings</button>
+        <button onclick="upgradeRingSpeed()">Upgrade Ring One</button>
+      </div>
+
+
+    </div>
+
+    <!-- Achievementz / Statz -->
+    <div id="menuSystemThree">
+
+
+    </div>
+
+    <!-- Settingz -->
+    <div id="menuSystemFour">
+
+
+    </div>
+  </div>
+
+  <!-- Script Sources -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.module.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123879/OrbitControls.js"></script>
+  <script src="scripts/materials.js"></script>
+  <script src="scripts/globals.js"></script>
+  <script src="scripts/objects.js"></script>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/main-functions.js"></script>
+</body>
+
+</html>

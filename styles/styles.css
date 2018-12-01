@@ -1,0 +1,455 @@
+/*
+* Animations
+*/
+
+@keyframes flickerText {
+  0% {
+    color: black;
+  }
+
+  10% {
+    color: black;
+  }
+
+  30% {
+    color: red;
+  }
+
+  50% {
+    color: red;
+  }
+
+  70% {
+    color: red;
+  }
+
+  90% {
+    color: red;
+  }
+
+  100% {
+    color: red;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    display: none;
+  }
+
+  10% {
+    display: inherit;
+  }
+
+  100% {
+    display: none;
+  }
+}
+
+@keyframes showTextSlowly {
+  0% {
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  10% {
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  30% {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  50% {
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  70% {
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  90% {
+    color: rgba(0, 0, 0, 0.9);
+  }
+
+  100% {
+    color: rgba(0, 0, 0, 1);
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    color: lightsalmon;
+    text-shadow:
+      2px -2px 0 lightsalmon,
+      -2px 2px 2px gold,
+      -4px 4px 2px yellow,
+      -6px 6px 2px green,
+      -8px 8px 2px lightblue;
+    /* -10px 20px 2px palevioletred;  */
+  }
+
+  18% {
+    color: palevioletred;
+    text-shadow:
+      2px -2px 0 palevioletred,
+      -2px 2px 2px lightsalmon,
+      -4px 4px 2px gold,
+      -6px 6px 2px yellow,
+      -8px 8px 2px green;
+    /* -10px 20px 2px lightblue;  */
+  }
+
+  36% {
+    color: lightblue;
+    text-shadow:
+      2px -2px 0 lightblue,
+      -2px 2px 2px palevioletred,
+      -4px 4px 2px lightsalmon,
+      -6px 6px 2px gold,
+      -8px 8px 2px yellow;
+    /* -10px 20px 2px green;  */
+  }
+
+  54% {
+    color: green;
+    text-shadow:
+      2px -2px 0 green,
+      -2px 2px 2px lightblue,
+      -4px 4px 2px palevioletred,
+      -6px 6px 2px lightsalmon,
+      -8px 8px 2px gold;
+    /* -10px 20px 2px yellow;   */
+  }
+
+  72% {
+    color: yellow;
+    text-shadow:
+      2px -2px 0 yellow,
+      -2px 2px 2px green,
+      -4px 4px 2px lightblue,
+      -6px 6px 2px palevioletred,
+      -8px 8px 2px lightsalmon;
+    /* -10px 20px 2px gold;   */
+  }
+
+  90% {
+    color: gold;
+    text-shadow:
+      2px -2px 0 gold,
+      -2px 2px 2px yellow,
+      -4px 4px 2px green,
+      -6px 6px 2px lightblue,
+      -8px 8px 2px palevioletred;
+    /* -10px 20px 2px lightsalmon;     */
+  }
+
+  100% {
+    color: lightsalmon;
+    text-shadow:
+      2px -2px 0 lightsalmon,
+      -2px 2px 2px gold,
+      -4px 4px 2px yellow,
+      -6px 6px 2px green,
+      -8px 8px 2px lightblue;
+    /* -10px 20px 2px palevioletred;  */
+  }
+}
+
+.custom-heading-1 {
+  text-align: center;
+  transition: text-shadow 2s;
+  text-shadow:
+    1px -1px 0 lightsalmon,
+    -1px 2px 1px gold,
+    -2px 4px 1px yellow,
+    -3px 6px 1px green,
+    -4px 8px 1px lightblue,
+    -5px 10px 1px palevioletred;
+  animation: colorChange 3s linear;
+}
+
+/*
+* Menu System
+*/
+
+#menuSystemMainOptions {
+  position: absolute;
+  top: 392.5px;
+  left: 0px;
+}
+
+#menuSystemMainOptions th {
+  width: 195px;
+  z-index: -2;
+}
+
+.menuTable {
+  width: 100px;
+  height: 50px;
+  z-index: -2;
+}
+
+#menuTabOne,
+#menuTabTwo,
+#menuTabThree,
+#menuTabFour {
+  font-size: 20px;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  background-color: black;
+  z-index: -2;
+}
+
+#menuTabOne {
+  transition: 1s;
+  box-shadow: 0.1em 0.1em 0 0 #4F2683, inset 0.1em 0.1em 0 0 rgb(172, 5, 5);
+}
+
+#menuTabTwo {
+  transition: 1s;
+  box-shadow: 0.1em 0.1em 0 0 rgb(38, 112, 131), inset 0.1em 0.1em 0 0 #4F2683;
+}
+
+#menuTabThree {
+  transition: 1s;
+  box-shadow: 0.1em 0.1em 0 0 rgb(45, 129, 37), inset 0.1em 0.1em 0 0 rgb(38, 112, 131);
+}
+
+#menuTabFour {
+  transition: 1s;
+  box-shadow: 0.1em 0.1em 0 0 rgb(172, 5, 5), inset 0.1em 0.1em 0 0 rgb(45, 129, 37);
+}
+
+#menuSystemOne,
+#menuSystemTwo,
+#menuSystemThree,
+#menuSystemFour {
+  z-index: 6;
+  width: 798px;
+  height: 154px;
+  position: absolute;
+  top: 445px;
+  left: -1px;
+  /* pointer-events: none; */
+}
+
+#menuSystemOne {
+  /* border-top: 2px solid rgb(47, 20, 202); */
+  border-bottom: 2px solid rgb(47, 20, 202);
+  border-left: 2px solid rgb(47, 20, 202);
+  border-right: 2px solid rgb(47, 20, 202);
+  transition: 1s;
+  /* background-image: url('../images/space-ui-background-blue.png'); */
+}
+
+.menuSelected {
+  background-color: grey;
+}
+
+#menuSystemTwo {
+  /* border-top: 2px solid red; */
+  border-bottom: 2px solid red;
+  border-left: 2px solid red;
+  border-right: 2px solid red;
+  display: none;
+  /* background-image: url('../images/space-ui-background-red.png'); */
+}
+
+#menuSystemThree {
+  /* border-top: 2px solid green; */
+  border-bottom: 2px solid green;
+  border-left: 2px solid green;
+  border-right: 2px solid green;
+  display: none;
+  /* background-image: url('../images/space-ui-background-green.png'); */
+}
+
+#menuSystemFour {
+  /* border-top: 2px solid purple; */
+  border-bottom: 2px solid purple;
+  border-left: 2px solid purple;
+  border-right: 2px solid purple;
+  display: none;
+  /* background-image: url('../images/seamless-abstract-nebula.jpg'); */
+}
+
+p {
+  color: black;
+  font-size: 17px;
+}
+
+#test {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+}
+
+#wrapper {
+  width: 800px;
+  height: 600px;
+  border: 1px solid red;
+  text-align: center;
+  float: left;
+  margin: 0 auto;
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.flickerOn {
+  animation: flickerText 3s ease-out 1, fadeOut 5s linear 1;
+  /* animation-name: flickerText, fadeOut;
+  animation-duration: 2s, 15s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1; */
+}
+
+.flickerOnTwo {
+  animation: flickerText 36s ease-out 1;
+}
+
+.flickerOnThree {
+  animation: flickerText 81s ease-out 1;
+}
+
+/*
+* General Positioning
+*/
+
+#buttonAddTorus {
+  position: absolute;
+  top: 550px;
+  left: 0px;
+  width: 800px;
+  text-align: center;
+}
+
+#LightControls {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+#LightControls h3 {
+  padding-top: 25px;
+  color: white;
+}
+
+#header {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 800px;
+  text-align: center;
+  vertical-align: top;
+}
+
+#mainSectionLeft {
+  position: absolute;
+  top: 101px;
+  left: 0px;
+  width: 150px;
+  height: 398px;
+}
+
+#mainSectionRight {
+  position: absolute;
+  top: 101px;
+  left: 649px;
+  width: 150px;
+  height: 398px;
+}
+
+#mainSectionTop {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 799px;
+  height: 100px;
+}
+
+#mainSectionBottom {
+  position: absolute;
+  top: 2px;
+  left: 0px;
+  width: 799px;
+  height: 100px;
+  border-bottom: none;
+}
+
+#gameTitle {
+  margin-bottom: -20px;
+  margin-top: -5px;
+  vertical-align: top;
+}
+
+/* Text Sizes */
+
+.largeText {
+  font-size: 38px;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+
+.mediumText {
+  font-size: 22px;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+
+.smallText {
+  font-size: 12px;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+
+.startHidden {
+  display: none;
+}
+
+.showTextSlowly {
+  animation: showTextSlowly 6s linear;
+}
+
+/** 
+*
+* Ring Sections
+*
+*/
+
+#ringSections tr {
+  display: inline-flex;
+  width: 795px;
+  height: 145px;
+}
+
+#ringSections td {
+  width: 75.5px;
+  height: 145px;
+}
+
+.ringSectionTwo,
+.ringSectionThree,
+.ringSectionFour,
+.ringSectionFive,
+.ringSectionSix,
+.ringSectionSeven,
+.ringSectionEight,
+.ringSectionNine,
+.ringSectionTen {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  vertical-align: top;
+  margin-top: -20px;
+  padding-bottom: 24px;
+}
+
+.ringSectionOne {
+  vertical-align: top;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  margin-top: -20px;
+  padding-bottom: 24px;
+}
