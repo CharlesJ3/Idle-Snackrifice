@@ -254,8 +254,16 @@ const runTorusOne = () => {
     // Turn the spinner on when you activate the torus
     player.torusOneActivated = true;
 
-    torusAddOne = torus1;
-    torus.add(torusAddOne);
+    // Add initial level
+    rings[0].ringLevel += 1;
+
+    // Show the Ring Section Once Activated
+    document.querySelector('.ringSectionOne').classList.add("fadeIn");
+
+    setTimeout(
+      function(){ document.querySelector('.ringSectionOne').style.display = "initial"; },
+    10)
+
     player.permanentRingCountForVariableNames++;
     player.currentRingCount++;
   } 
@@ -278,8 +286,17 @@ const runTorusTwo = () => {
     // Update camera POV a bit to adjust to it!
     camera.position.z = 500;
 
-    torusAddTwo = torus2;
-    torusTwo.add(torusAddTwo);
+
+    // Add initial level
+    rings[1].ringLevel += 1;
+
+    // Show the Ring Section Once Activated
+    document.querySelector('.ringSectionTwo').classList.add("fadeIn");
+
+    setTimeout(
+      function(){ document.querySelector('.ringSectionTwo').style.display = "initial"; },
+    10)
+
     player.permanentRingCountForVariableNames++;
     player.currentRingCount++;
   }
@@ -302,10 +319,19 @@ const runTorusThree = () => {
     // Update camera POV a bit to adjust to it!
     camera.position.z = 555;
 
-    torusAddThree = torus3;
-    torusThree.add(torusAddThree);
+    // Add initial level
+    rings[2].ringLevel += 1;
+
+    // Show the Ring Section Once Activated
+    document.querySelector('.ringSectionThree').classList.add("fadeIn");
+
+    setTimeout(
+      function(){ document.querySelector('.ringSectionThree').style.display = "initial"; },
+    10)
+
     player.permanentRingCountForVariableNames++;
     player.currentRingCount++;
+
   }
 }
 
@@ -326,8 +352,21 @@ const runTorusFour = () => {
     // Update camera POV a bit to adjust to it!
     camera.position.z = 635;
 
+    // Add initial level
+    rings[3].ringLevel += 1;
+
+    // Show the Ring Section Once Activated
+    document.querySelector('.ringSectionFour').classList.add("fadeIn");
+
+    setTimeout(
+      function(){ document.querySelector('.ringSectionFour').style.display = "initial"; },
+    10)
+
     player.permanentRingCountForVariableNames++;
     player.currentRingCount++;
+
+    //UNIQUE TO THIS SPECIFIC RING - Will Switchover Once to the HUMAN SACRIFICES to help out
+    switchMenuTwo();
   }
 }
 
@@ -349,12 +388,16 @@ const runTorusFive = () => {
     // Update camera POV a bit to adjust to it!
     camera.position.z = 755;
 
-    // On Torus Five and above, we'll start increasing the max camera distance
-    // camera.fov = 65;
-    // camera.updateProjectionMatrix();
+    // Add initial level
+    rings[4].ringLevel += 1;
 
-    torusAddFive = torus5;
-    torusFive.add(torusAddFive);
+    // Show the Ring Section Once Activated
+    document.querySelector('.ringSectionFive').classList.add("fadeIn");
+
+    setTimeout(
+      function(){ document.querySelector('.ringSectionFive').style.display = "initial"; },
+    10)
+
     player.permanentRingCountForVariableNames++;
     player.currentRingCount++;
   }
@@ -377,12 +420,16 @@ const runTorusSix = () => {
     // Update camera POV a bit to adjust to it!
     camera.position.z = 855;
 
-    // On Torus Five and above, we'll start increasing the max camera distance
-    // camera.fov = 70;
-    // camera.updateProjectionMatrix();
+    // Add initial level
+    rings[5].ringLevel += 1;
 
-    torusAddSix = torus6;
-    torusSix.add(torusAddSix);
+    // Show the Ring Section Once Activated
+    document.querySelector('.ringSectionSix').classList.add("fadeIn");
+
+    setTimeout(
+      function(){ document.querySelector('.ringSectionSix').style.display = "initial"; },
+    10)
+
     player.permanentRingCountForVariableNames++;
     player.currentRingCount++;
   }

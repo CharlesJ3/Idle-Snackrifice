@@ -7,80 +7,6 @@ body {
   text-shadow: 1px 1px 1px green;
 }
 
-@keyframes flickerText {
-  0% {
-    color: black;
-  }
-
-  10% {
-    color: black;
-  }
-
-  30% {
-    color: white;
-  }
-
-  50% {
-    color: white;
-  }
-
-  70% {
-    color: white;
-  }
-
-  90% {
-    color: white;
-  }
-
-  100% {
-    color: white;
-  }
-}
-
-@keyframes fadeOut {
-  0% {
-    display: none;
-  }
-
-  10% {
-    display: inherit;
-  }
-
-  100% {
-    display: none;
-  }
-}
-
-@keyframes showTextSlowly {
-  0% {
-    color: rgba(0, 0, 0, 0.5);
-  }
-
-  10% {
-    color: rgba(0, 0, 0, 0.5);
-  }
-
-  30% {
-    color: rgba(0, 0, 0, 0.6);
-  }
-
-  50% {
-    color: rgba(0, 0, 0, 0.7);
-  }
-
-  70% {
-    color: rgba(0, 0, 0, 0.8);
-  }
-
-  90% {
-    color: rgba(0, 0, 0, 0.9);
-  }
-
-  100% {
-    color: rgba(0, 0, 0, 1);
-  }
-}
-
 @keyframes colorChange {
   0% {
     color: red;
@@ -166,8 +92,21 @@ body {
     opacity: 1;
   }
   100% {
-    display: none;
     opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  /* 10% {
+    opacity: .7;
+  } */
+
+  100% {
+    opacity: 1;
   }
 }
 
@@ -189,6 +128,10 @@ body {
 
 .fadeOut {
   animation: fadeOut 3s linear;
+}
+
+.fadeIn {
+  animation: fadeIn 3s ease-out;
 }
 
 /*
@@ -507,6 +450,10 @@ p {
   /* color: white; */
 }
 
+.ringSection {
+  display: none;
+}
+
 #ringSectionOneLevel,
 #ringSectionTwoLevel,
 #ringSectionThreeLevel,
@@ -539,7 +486,9 @@ p {
 #ringSectionFiveTitle,
 #ringSectionSixTitle {
   border: 1px solid white;
-  width: 187px;
+  background-color: rgba(0,0,0,.5);
+  color: white;
+  width: 173px;
   height: 40px;
   position: absolute;
   text-align: center;
