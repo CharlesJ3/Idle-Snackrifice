@@ -99,42 +99,141 @@ const updateText = () => {
   Human<br>
     ${(player.human).toFixed(1)} 
   `
+  /**
+   * Speed Upgrade
+   */
 
   //Animal One
   document.querySelector('#animalInfoOne').innerHTML = `
-  Speed Upgrade:
-      ${(rings[0].ringCost).toFixed(1)}
+  <span class="underlineText">
+    &nbsp;Speed&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    Cost&nbsp
+  </span>
+    <br>
+  <span class="positionInsideSpeedLeft"> ${(rings[0].rotationalSpeedX.toFixed(2) * 102)} </span>
+  <span class="positionInsideSpeedRight"> ${(rings[0].ringCost).toFixed(0)} </span>
   `
   //Animal Two
   document.querySelector('#animalInfoTwo').innerHTML = `
-  Speed Upgrade:
-      ${(rings[1].ringCost).toFixed(1)}
+  <span class="underlineText">
+    &nbsp;Speed&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    Cost&nbsp
+  </span>
+    <br>
+  <span class="positionInsideSpeedLeft"> ${(rings[1].rotationalSpeedX.toFixed(2) * 102)} </span>
+  <span class="positionInsideSpeedRight"> ${(rings[1].ringCost).toFixed(0)} </span>
   `
-
   //Animal Three
   document.querySelector('#animalInfoThree').innerHTML = `
-  Speed Upgrade:
-      ${(rings[2].ringCost).toFixed(1)}
+  <span class="underlineText">
+    &nbsp;Speed&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    Cost&nbsp
+  </span>
+    <br>
+  <span class="positionInsideSpeedLeft"> ${(rings[2].rotationalSpeedX.toFixed(2) * 102)} </span>
+  <span class="positionInsideSpeedRight"> ${(rings[2].ringCost).toFixed(0)} </span>
   `
 
   //Human One
   document.querySelector('#animalInfoFour').innerHTML = `
-  Speed Upgrade:
-      ${(rings[3].ringCost).toFixed(1)}
+  <span class="underlineText">
+    &nbsp;Speed&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    Cost&nbsp
+  </span>
+    <br>
+  <span class="positionInsideSpeedLeft"> ${(rings[3].rotationalSpeedX.toFixed(2) * 102)} </span>
+  <span class="positionInsideSpeedRight"> ${(rings[3].ringCost).toFixed(0)} </span>
   `
 
-  //Animal Two
+  //Human Two
   document.querySelector('#animalInfoFive').innerHTML = `
-  Speed Upgrade:
-      ${(rings[4].ringCost).toFixed(1)}
+  <span class="underlineText">
+    &nbsp;Speed&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    Cost&nbsp
+  </span>
+    <br>
+  <span class="positionInsideSpeedLeft"> ${(rings[4].rotationalSpeedX.toFixed(2) * 102)} </span>
+  <span class="positionInsideSpeedRight"> ${(rings[4].ringCost).toFixed(0)} </span>
   `
 
   //Human Three
   document.querySelector('#animalInfoSix').innerHTML = `
-  Speed Upgrade:
-      ${(rings[5].ringCost).toFixed(1)}
+  <span class="underlineText">
+    &nbsp;Speed&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    Cost&nbsp
+  </span>
+    <br>
+  <span class="positionInsideSpeedLeft"> ${(rings[5].rotationalSpeedX.toFixed(2) * 102)} </span>
+  <span class="positionInsideSpeedRight"> ${(rings[5].ringCost).toFixed(0)} </span>
   `
 
+  /**
+   * Power Upgrade
+   */
+
+ //Animal One
+ document.querySelector('#animalInfoPowerOne').innerHTML = `
+ <span class="underlineText">
+   Power|
+   Cost
+ </span>
+   <br>
+ <span class="positionInsidePowerLeft"> ${(rings[0].ringPower.toFixed(2))} </span>
+ <span class="positionInsidePowerRight"> ${(rings[0].ringPowerCost).toFixed(0)} </span>
+ `
+ //Animal Two
+ document.querySelector('#animalInfoPowerTwo').innerHTML = `
+ <span class="underlineText">
+   Power|
+   Cost
+ </span>
+   <br>
+ <span class="positionInsidePowerLeft"> ${(rings[1].ringPower.toFixed(2))} </span>
+ <span class="positionInsidePowerRight"> ${(rings[1].ringPowerCost).toFixed(0)} </span>
+ `
+ //Animal Three
+ document.querySelector('#animalInfoPowerThree').innerHTML = `
+ <span class="underlineText">
+   Power|
+   Cost
+ </span>
+   <br>
+ <span class="positionInsidePowerLeft"> ${(rings[2].ringPower.toFixed(2))} </span>
+ <span class="positionInsidePowerRight"> ${(rings[2].ringPowerCost).toFixed(0)} </span>
+ `
+
+ //Human One
+ document.querySelector('#animalInfoPowerFour').innerHTML = `
+ <span class="underlineText">
+   Power|
+   Cost
+ </span>
+   <br>
+ <span class="positionInsidePowerLeft"> ${(rings[3].ringPower.toFixed(2))} </span>
+ <span class="positionInsidePowerRight"> ${(rings[3].ringPowerCost).toFixed(0)} </span>
+ `
+
+ //Human Two
+ document.querySelector('#animalInfoPowerFive').innerHTML = `
+ <span class="underlineText">
+   Power|
+   Cost
+ </span>
+   <br>
+ <span class="positionInsidePowerLeft"> ${(rings[4].ringPower.toFixed(2))} </span>
+ <span class="positionInsidePowerRight"> ${(rings[4].ringPowerCost).toFixed(0)} </span>
+ `
+
+ //Human Three
+ document.querySelector('#animalInfoPowerSix').innerHTML = `
+ <span class="underlineText">
+   Power|
+   Cost
+ </span>
+   <br>
+ <span class="positionInsidePowerLeft"> ${(rings[5].ringPower.toFixed(2))} </span>
+ <span class="positionInsidePowerRight"> ${(rings[5].ringPowerCost).toFixed(0)} </span>
+ `
   // Show Levels inside of Level Section
   document.querySelector('#ringSectionOneLevel').innerHTML = `
   Lvl: <br>
@@ -197,6 +296,12 @@ const updateText = () => {
     ${rings[5].ringSacrifice}
   `
 
+  /*Section for Updating NEW RING TEXT*/
+
+  document.querySelector('#addRing').innerHTML = `
+  Start Rat Engine <p></p> (A: 1) <br>
+    ${rings[5].ringSacrifice}
+  `
   // document.querySelector('#ringOne').innerHTML = `Ring One Cost: <br> ${(rings[0].ringCost).toFixed(1)}`
 }
 

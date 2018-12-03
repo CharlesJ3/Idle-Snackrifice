@@ -91,6 +91,7 @@ body {
   0% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
@@ -195,7 +196,7 @@ body {
   width: 798px;
   height: 154px;
   position: absolute;
-  top: 394px;
+  top: 424px;
   left: -1px;
   /* pointer-events: none; */
 }
@@ -290,6 +291,7 @@ p {
   top: 0px;
   left: 0px;
 }
+
 #buttonAddTorus {
   position: absolute;
   top: 550px;
@@ -405,7 +407,7 @@ p {
 #ringSections td {
   background-color: rgba(0, 0, 0, 0.6);
   width: 33%;
-  height: 145px;
+  height: 114px;
 }
 
 #ringSectionsTwo td {
@@ -441,15 +443,6 @@ p {
   display: none;
 }
 
-#animalInfoOne,
-#animalInfoTwo,
-#animalInfoThree,
-#animalInfoFour,
-#animalInfoFive,
-#animalInfoSix {
-  /* color: white; */
-}
-
 .ringSection {
   display: none;
 }
@@ -467,18 +460,6 @@ p {
   text-shadow: 1px 1px 1px black;
 }
 
-#ringSectionOneLevel {}
-
-#ringSectionTwoLevel {}
-
-#ringSectionThreeLevel {}
-
-#ringSectionFourLevel {}
-
-#ringSectionFiveLevel {}
-
-#ringSectionSixLevel {}
-
 #ringSectionOneTitle,
 #ringSectionTwoTitle,
 #ringSectionThreeTitle,
@@ -486,7 +467,7 @@ p {
 #ringSectionFiveTitle,
 #ringSectionSixTitle {
   border: 1px solid white;
-  background-color: rgba(0,0,0,.5);
+  background-color: rgba(0, 0, 0, .5);
   color: white;
   width: 173px;
   height: 40px;
@@ -513,44 +494,10 @@ p {
   left: 615px;
 }
 
-#ringSectionFourTitle {}
-
-#ringSectionSixTitle {}
-
-
-#ringSectionOneReady,
-#ringSectionTwoReady,
-#ringSectionThreeReady,
-#ringSectionFourReady,
-#ringSectionFiveReady,
-#ringSectionSixReady {
-  border: 1px solid white;
-  width: 80px;
-  height: 40px;
-  position: absolute;
-}
-
-#ringSectionOneReady,
-#ringSectionFourReady {
-  top: -15px;
-  left: 182px;
-}
-
-#ringSectionTwoReady,
-#ringSectionFiveReady {
-  top: -15px;
-  left: 447px;
-}
-
-#ringSectionThreeReady,
-#ringSectionSixReady {
-  top: -15px;
-  left: 712px;
-}
-
 /**
 * Animal/Human Section
 **/
+
 #mainAnimalInfo {
   color: white;
   text-shadow: 1px 1px 1px rgba(255, 6, 6, 0.829);
@@ -562,6 +509,14 @@ p {
   left: 25px;
   border: 1px solid white;
   border-right: none;
+
+  background: -moz-linear-gradient(left, rgba(204, 0, 13, 0.6) 0%, rgba(204, 0, 13, 0.51) 44%,
+    rgba(168, 4, 14, 0.5) 50%, rgba(19, 19, 19, 0.25) 75%, rgba(19, 19, 19, 0) 100%);
+  background: -webkit-linear-gradient(left, rgba(204, 0, 13, 0.6) 0%, rgba(204, 0, 13, 0.51) 44%,
+    rgba(168, 4, 14, 0.5) 50%, rgba(19, 19, 19, 0.25) 75%, rgba(19, 19, 19, 0) 100%);
+  background: linear-gradient(to right, rgba(204, 0, 13, 0.6) 0%, rgba(204, 0, 13, 0.51) 44%,
+    rgba(168, 4, 14, 0.5) 50%, rgba(19, 19, 19, 0.25) 75%, rgba(19, 19, 19, 0) 100%);
+
 }
 
 #mainAnimalInfoTwo {
@@ -575,6 +530,13 @@ p {
   left: 525px;
   border: 1px solid white;
   border-left: none;
+
+  background: -moz-linear-gradient(left, rgba(19, 19, 19, 0) 0%, rgba(19, 19, 19, 0.25) 25%,
+    rgba(36, 48, 158, 0.5) 50%, rgba(40, 55, 191, 0.51) 56%, rgba(40, 55, 191, 0.6) 100%);
+  background: -webkit-linear-gradient(left, rgba(19, 19, 19, 0) 0%, rgba(19, 19, 19, 0.25) 25%,
+    rgba(36, 48, 158, 0.5) 50%, rgba(40, 55, 191, 0.51) 56%, rgba(40, 55, 191, 0.6) 100%);
+  background: linear-gradient(to right, rgba(19, 19, 19, 0) 0%, rgba(19, 19, 19, 0.25) 25%,
+    rgba(36, 48, 158, 0.5) 50%, rgba(40, 55, 191, 0.51) 56%, rgba(40, 55, 191, 0.6) 100%);
 }
 
 #showOrHide {
@@ -596,37 +558,43 @@ p {
 .ringSectionOne {
   background-image: url('../textures/rat1.png');
   background-size: cover;
+  background-position-x: 6px;
+  background-position-y: 134px;
 }
 
 .ringSectionTwo {
   background-image: url('../textures/deer1.png');
   background-size: cover;
+  background-position-x: 6px;
+  background-position-y: 125px;
 }
 
 
 .ringSectionThree {
   background-image: url('../textures/trex1.png');
-  background-position-x: -109px;
-  background-position-y: 200px;
+  background-position-x: -114px;
+  background-position-y: 136px;
 }
 
 .ringSectionFour {
-  background-image: url('../textures/trog1.png');
+  background-image: url(../textures/trog1.png);
   background-size: cover;
-  background-position-x: -63px;
-  background-position-y: 200px;
+  background-position-x: -74px;
+  background-position-y: 125px;
 }
 
 .ringSectionFive {
   background-image: url('../textures/peasant1.png');
   background-size: cover;
-  background-position-x: -15px;
-  background-position-y: 171px;
+  background-position-x: -83px;
+  background-position-y: 129px;
 }
 
-.ringSectionSix{
+.ringSectionSix {
   background-image: url('../textures/alien1.png');
   background-size: cover;
+  background-position-x: -19px;
+  background-position-y: 124px;
 }
 
 /*
@@ -657,4 +625,163 @@ p {
   float: right;
   font-size: 14px;
   margin-top: 5px;
+}
+
+/**
+* Speed Upgrade Positioning
+**/
+
+#animalInfoOne,
+#animalInfoTwo,
+#animalInfoThree,
+#animalInfoFour,
+#animalInfoFive,
+#animalInfoSix {
+  position: absolute;
+  width: 140px;
+  height: 96px;
+  border: 1px solid aliceblue;
+}
+
+#animalInfoOne,
+#animalInfoFour {
+  top: 10px;
+  left: 5px;
+}
+
+#animalInfoTwo,
+#animalInfoFive {
+  top: 10px;
+  left: 270px;
+}
+
+#animalInfoThree,
+#animalInfoSix {
+  top: 10px;
+  left: 535px;
+}
+
+#checkAvailabilityOneB,
+#checkAvailabilityTwoB,
+#checkAvailabilityThreeB,
+#checkAvailabilityFourB,
+#checkAvailabilityFiveB,
+#checkAvailabilitySixB {
+  position: absolute;
+  z-index: 10;
+}
+
+#checkAvailabilityOneB,
+#checkAvailabilityFourB {
+  top: 103px;
+  left: 45px;
+}
+
+#checkAvailabilityTwoB,
+#checkAvailabilityFiveB {
+  top: 103px;
+  left: 310px;
+}
+
+#checkAvailabilityThreeB,
+#checkAvailabilitySixB {
+  top: 103px;
+  left: 575px;
+}
+
+/**
+* Span Flavor Text
+**/
+
+.underlineText {
+  text-decoration: underline;
+}
+
+.noUnderlineText {
+  text-decoration: none;
+}
+
+.positionInsideSpeedLeft {
+  text-align: center;
+  margin-right: 15px;
+  padding: 15px;
+}
+
+.positionInsideSpeedRight {
+  text-align: center;
+  margin-left: 15px;
+  padding: 15px;
+}
+
+.positionInsidePowerLeft {
+  text-align: left;
+  margin-right: 3px;
+  padding: 3px;
+}
+
+.positionInsidePowerRight {
+  text-align: right;
+  margin-left: 3px;
+  padding: 3px;
+
+}
+/*************************************/
+#animalInfoPowerOne,
+#animalInfoPowerTwo,
+#animalInfoPowerThree,
+#animalInfoPowerFour,
+#animalInfoPowerFive,
+#animalInfoPowerSix {
+  position: absolute;
+  width: 119px;
+  height: 95px;
+  border: 1px solid aliceblue;
+  color: white;
+}
+
+#animalInfoPowerOne,
+#animalInfoPowerFour {
+  top: 10px;
+  left: 145px;
+}
+
+#animalInfoPowerTwo,
+#animalInfoPowerFive {
+  top: 10px;
+  left: 410px;
+}
+
+#animalInfoPowerThree,
+#animalInfoPowerSix {
+  top: 10px;
+  left: 675px;
+}
+
+#checkAvailabilityPowerOneB,
+#checkAvailabilityPowerTwoB,
+#checkAvailabilityPowerThreeB,
+#checkAvailabilityPowerFourB,
+#checkAvailabilityPowerFiveB,
+#checkAvailabilityPowerSixB {
+  position: absolute;
+  z-index: 10;
+  color: white;
+}
+
+#checkAvailabilityPowerOneB,
+#checkAvailabilityPowerFourB {
+  top: 103px;
+  left: 175px;
+}
+
+#checkAvailabilityPowerTwoB,
+#checkAvailabilityPowerFiveB {
+  top: 103px;
+  left: 445px;
+}
+
+#checkAvailabilityPowerThreeB,
+#checkAvailabilityPowerSixB {
+  top: 103px;
+  left: 705px;
 }

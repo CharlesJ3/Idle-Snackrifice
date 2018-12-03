@@ -15,6 +15,7 @@
     <div id="showOrHide">
 
         <input name="showOrHideAll" onclick="showOrHide(showOrHideAll)" type="checkbox" value="show" id="showOrHideAll">Hide UI?<br>
+        <!-- <input name="showOrHideAllTwo" onclick="showOrHide(showOrHideAll)" type="checkbox" value="sh" id="sho">Tutorial!<br> -->
     </div>
 
   <!-- Main Battle Area -->
@@ -36,8 +37,8 @@
     </div>
 
     <div id="mainSectionRight">
-      <div class="large" id="addRing" onclick="addNewRingToArray()">Sacrifice Rat Engine <p></p> (A: 1)</div>
-      <div class="large" id="addRingHuman" onclick="addNewHumanRingToArray()">Sacrifice Troglodyte Engine <p></p> (H: 1)</div>
+      <div class="large" id="addRing" onclick="addNewRingToArray()">Start Rat Engine <p></p> (A: 1)</div>
+      <div class="large" id="addRingHuman" onclick="addNewHumanRingToArray()">Start Troglodyte Engine <p></p> (H: 1)</div>
 
     </div>
 
@@ -65,31 +66,54 @@
           <tr>
             <td class="ringSection ringSectionOne">
 
+              <!-- Ring SPEED UPGRADES-->
               <div id="ringSectionOneLevel"></div>
               <div id="ringSectionOneTitle"></div>
-              <!-- <div id="ringSectionOneReady"></div> -->
 
               <p class="showTextSlowly" id="animalInfoOne" class="hide"></p>
               <div id="checkAvailabilityOneB" onclick="upgradeRingSpeedOne()">Upgrade</div>
+
+              <!-- Ring POWER UPGRADES-->
+              <div id="ringSectionPowerOneLevel"></div>
+              <div id="ringSectionPowerOneTitle"></div>
+
+              <p class="showTextSlowly" id="animalInfoPowerOne" class="hide"></p>
+              <div id="checkAvailabilityPowerOneB" onclick="upgradeRingPowerOne()">Upgrade</div>
+
             </td>
             <td class="ringSection ringSectionTwo">
 
+              <!-- Ring SPEED UPGRADES-->
               <div id="ringSectionTwoLevel"></div>
               <div id="ringSectionTwoTitle"></div>
-              <!-- <div id="ringSectionTwoReady"></div> -->
-
 
               <p class="showTextSlowly" id="animalInfoTwo" class="hide"></p>
               <div id="checkAvailabilityTwoB" onclick="upgradeRingSpeedTwo()">Upgrade</div>
+
+              <!-- Ring POWER UPGRADES-->
+              <div id="ringSectionPowerTwoLevel"></div>
+              <div id="ringSectionPowerTwoTitle"></div>
+
+              <p class="showTextSlowly" id="animalInfoPowerTwo" class="hide"></p>
+              <div id="checkAvailabilityPowerTwoB" onclick="upgradeRingPowerTwo()">Upgrade</div>
+              
             </td>
             <td class="ringSection ringSectionThree">
 
+              <!-- Ring SPEED UPGRADES-->
               <div id="ringSectionThreeLevel"></div>
               <div id="ringSectionThreeTitle"></div>
-              <!-- <div id="ringSectionThreeReady"></div> -->
 
               <p class="showTextSlowly hide" id="animalInfoThree"></p>
               <div id="checkAvailabilityThreeB" onclick="upgradeRingSpeedThree()">Upgrade</div>
+
+              <!-- Ring POWER UPGRADES-->
+              <div id="ringSectionPowerThreeLevel"></div>
+              <div id="ringSectionPowerThreeTitle"></div>
+
+              <p class="showTextSlowly" id="animalInfoPowerThree" class="hide"></p>
+              <div id="checkAvailabilityPowerThreeB" onclick="upgradeRingPowerThree()">Upgrade</div>
+              
             </td>
           </tr>
         </table>
@@ -102,32 +126,56 @@
         <tr>
           <td class="ringSection ringSectionFour showTextSlowly">
 
+            <!-- Ring SPEED UPGRADES-->
             <div id="ringSectionFourLevel"></div>
             <div id="ringSectionFourTitle"></div>
-            <!-- <div id="ringSectionFourReady"></div> -->
 
             <p class="showTextSlowly hide checkAvailabilityFourA" id="animalInfoFour"></p>
             <div id="checkAvailabilityFourB" onclick="upgradeRingSpeedFour()">Upgrade</div>
 
+            <!-- Ring POWER UPGRADES-->
+            <div id="ringSectionPowerFourLevel"></div>
+            <div id="ringSectionPowerFourTitle"></div>
+
+            <p class="showTextSlowly" id="animalInfoPowerFour" class="hide"></p>
+            <div id="checkAvailabilityPowerFourB" onclick="upgradeRingPowerFour()">Upgrade</div>
+              
+
           </td>
           <td class="ringSection ringSectionFive showTextSlowly">
 
+            <!-- Ring SPEED UPGRADES-->
             <div id="ringSectionFiveLevel"></div>
             <div id="ringSectionFiveTitle"></div>
-            <!-- <div id="ringSectionFiveReady"></div> -->
 
             <p class="showTextSlowly hide" id="animalInfoFive"></p>
             <div id="checkAvailabilityFiveB" onclick="upgradeRingSpeedFive()">Upgrade</div>
 
+            <!-- Ring POWER UPGRADES-->
+            <div id="ringSectionPowerFiveLevel"></div>
+            <div id="ringSectionPowerFiveTitle"></div>
+
+            <p class="showTextSlowly" id="animalInfoPowerFive" class="hide"></p>
+            <div id="checkAvailabilityPowerFiveB" onclick="upgradeRingPowerFive()">Upgrade</div>
+              
+
           </td>
           <td class="ringSection ringSectionSix showTextSlowly">
 
+            <!-- Ring SPEED UPGRADES-->
             <div id="ringSectionSixLevel"></div>
             <div id="ringSectionSixTitle"></div>
-            <!-- <div id="ringSectionSixReady"></div> -->
 
             <p class="showTextSlowly hide" id="animalInfoSix"></p>
             <div id="checkAvailabilitySixB" onclick="upgradeRingSpeedSix()">Upgrade</div>
+
+            <!-- Ring POWER UPGRADES-->
+            <div id="ringSectionPowerSixLevel"></div>
+            <div id="ringSectionPowerSixTitle"></div>
+
+            <p class="showTextSlowly" id="animalInfoPowerSix" class="hide"></p>
+            <div id="checkAvailabilityPowerSixB" onclick="upgradeRingPowerSix()">Upgrade</div>
+              
 
           </td>
         </tr>

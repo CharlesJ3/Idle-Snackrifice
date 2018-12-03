@@ -24,17 +24,6 @@ const upgradeRingSpeedOne = () => {
     }
 
     flashLights();
-
-    // function showLights(){
-    //   for(i = 0; i < 10; i++) {
-    //     materialOne.emissiveIntensity += .01;
-    //     setTimeout(function () {
-    //       materialOne.emissiveIntensity += .01;
-    //       console.log('sup');
-    //     }, 500);
-    //   }
-    //  }
-    //  showLights();
   }
 }
 
@@ -136,6 +125,32 @@ const upgradeRingSpeedSix = () => {
         setTimeout(flashLights, 100);
       } else {
         materialSix.emissiveIntensity = materialDefaults.materialEmissiveSixIntensity;
+      }
+    }
+
+    flashLights();
+  }
+}
+
+
+/**
+ * Power
+ */
+
+const upgradeRingPowerOne = () => {
+  if (player.animal > rings[0].ringPowerCost) {
+    player.animal -= rings[0].ringPowerCost;
+    rings[0].ringPower += (0.02 * rings[0].ringPower);
+
+    rings[0].ringPowerLevel += 1;
+    rings[0].ringPowerCost = (rings[0].ringPowerCost * 1.15) + (1 * rings[0].ringPowerLevel);
+
+    function flashLights() {
+      if (materialOne.emissiveIntensity <= 1.5) {
+        materialOne.emissiveIntensity += .02
+        setTimeout(flashLights, 100);
+      } else {
+        materialOne.emissiveIntensity = materialDefaults.materialEmissiveOneIntensity;
       }
     }
 

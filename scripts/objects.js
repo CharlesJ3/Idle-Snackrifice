@@ -38,98 +38,119 @@ const player = {
 const rings = [{
   ringNumber: 1,
   ringInitialCost: 1,
+  ringInitialPowerCost: 1,
   ringCost: 1,
+  ringPowerCost: 1,
   ringSacrifice: 'Rat',
   ringColorOne: '',
   ringColorTwo: '',
   ringColorThree: '',
+  ringPower: 1.00,
   ringLevel: 0,
+  ringPowerLevel: 0,
   rotationalSpeedX: Math.PI / 1080,
   rotationalSpeedY: 0,
   addAnimal() {
-    player.animal += (this.rotationalSpeedX) + (this.rotationalSpeedY)
+    player.animal +=   ((this.rotationalSpeedX) + (this.rotationalSpeedY) * this.ringPower)
   },
 
 }, {
   ringNumber: 2,
   ringInitialCost: 2,
+  ringInitialPowerCost: 2,
   ringCost: 2,
+  ringPowerCost: 2,
   ringSacrifice: 'Deer',
   ringColorOne: '',
   ringColorTwo: '',
   ringColorThree: '',
+  ringPower: 1.00,
   ringLevel: 0,
+  ringPowerLevel: 0,
   rotationalSpeedX: Math.PI / 1080,
   rotationalSpeedY: 0,
   addAnimal() {
-    player.animal += (this.rotationalSpeedX) + (this.rotationalSpeedY)
+    player.animal +=   ((this.rotationalSpeedX) + (this.rotationalSpeedY) * this.ringPower)
   },
 
 }, {
   ringNumber: 3,
   ringInitialCost: 3,
+  ringInitialPowerCost: 3,
   ringCost: 3,
+  ringPowerCost: 3,
   ringSacrifice: 'T-Rex',
   ringColorOne: '',
   ringColorTwo: '',
   ringColorThree: '',
+  ringPower: 1.00,
   ringLevel: 0,
+  ringPowerLevel: 0,
   rotationalSpeedX: Math.PI / 1080,
   rotationalSpeedY: 0,
   addAnimal() {
-    player.human += (this.rotationalSpeedX) + (this.rotationalSpeedY)
+    player.human +=   ((this.rotationalSpeedX) + (this.rotationalSpeedY) * this.ringPower)
   },
 
 }, {
   ringNumber: 4,
   ringInitialCost: 1,
+  ringInitialPowerCost: 1,
   ringSacrifice: 'Troglodyte',
   ringCost: 1,
+  ringPowerCost: 1,
   ringColorOne: '',
   ringColorTwo: '',
   ringColorThree: '',
+  ringPower: 1.00,
   ringLevel: 0,
+  ringPowerLevel: 0,
   rotationalSpeedX: 0,
   rotationalSpeedY: Math.PI / 1080,
   addAnimal() {
-    player.human += (this.rotationalSpeedX) + (this.rotationalSpeedY)
+    player.human +=   ((this.rotationalSpeedX) + (this.rotationalSpeedY) * this.ringPower)
   },
 
 }, {
   ringNumber: 5,
   ringInitialCost: 2,
+  ringInitialPowerCost: 2,
   ringCost: 2,
+  ringPowerCost: 2,
   ringSacrifice: 'Peasant',
   ringColorOne: '',
   ringColorTwo: '',
   ringColorThree: '',
   ringLevel: 0,
+  ringPowerLevel: 0,
+  ringPower: 1.00,
   rotationalSpeedX: 0,
   rotationalSpeedY: Math.PI / 1080,
   addAnimal() {
-    player.human += (this.rotationalSpeedX) + (this.rotationalSpeedY)
+    player.human +=   ((this.rotationalSpeedX) + (this.rotationalSpeedY) * this.ringPower)
   },
 
 }, {
   ringNumber: 6,
   ringInitialCost: 3,
+  ringInitialPowerCost: 3,
   ringCost: 3,
+  ringPowerCost: 3,
   ringSacrifice: 'Alien',
   ringColorOne: '',
   ringColorTwo: '',
   ringColorThree: '',
+  ringPower: 1.00,
   ringLevel: 0,
+  ringPowerLevel: 0,
   rotationalSpeedX: 0,
   rotationalSpeedY: Math.PI / 1080,
   addAnimal() {
-    player.animal += (this.rotationalSpeedX) + (this.rotationalSpeedY)
+    player.animal +=   ((this.rotationalSpeedX) + (this.rotationalSpeedY) * this.ringPower)
   },
 }]
 
 const enemy = {
-  // Enemy Statistics  (essential)
-
-  // Enemy Information (non-essential)
   name: '',
   id: '',
 }
