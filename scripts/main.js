@@ -46,30 +46,30 @@ const scene = new THREE.Scene();
 
 //Lights
 
-let dirLight = new THREE.DirectionalLight( 0xffffff, .5);
+let dirLight = new THREE.DirectionalLight(0xffffff, .5);
 dirLight.intensity = 1;
 dirLight.position.set(435, -5, 125);
 dirLight.name = 'dirLight';
 scene.add(dirLight);
 
-let dirLight2 = new THREE.DirectionalLight( 0xffffff, .5);
+let dirLight2 = new THREE.DirectionalLight(0xffffff, .5);
 // dirLight.intensity = 1;
 dirLight2.position.set(-435, -5, 125);
 dirLight2.name = 'dirLightTwo';
 scene.add(dirLight2);
 
-var light = new THREE.SpotLight( 0xffffff, 15, 25, 1.00, 0, 1);
+var light = new THREE.SpotLight(0xffffff, 15, 25, 1.00, 0, 1);
 light.position.x = 15;
 light.position.y = -1;
 light.position.z = 1;
-scene.add( light );
+scene.add(light);
 
 
-var light2 = new THREE.SpotLight( 0xffffff, 15, 25, 1.00, 0, 1);
+var light2 = new THREE.SpotLight(0xffffff, 15, 25, 1.00, 0, 1);
 light2.position.x = -15;
 light2.position.y = -1;
 light2.position.z = -1;
-scene.add( light2 );
+scene.add(light2);
 
 // var light2 = new THREE.SpotLight( 0xff0000, 2, 10);
 // scene.add( light2 );
@@ -110,7 +110,7 @@ const updateText = () => {
     Cost&nbsp
   </span>
     <br>
-  <span class="positionInsideSpeedLeft"> ${(rings[0].rotationalSpeedX.toFixed(2) * 102)} </span>
+  <span class="positionInsideSpeedLeft"> ${(rings[0].ringSpeedUpgrade() * 100).toFixed(3)} </span>
   <span class="positionInsideSpeedRight"> ${(rings[0].ringCost).toFixed(0)} </span>
   `
   //Animal Two
@@ -120,7 +120,7 @@ const updateText = () => {
     Cost&nbsp
   </span>
     <br>
-  <span class="positionInsideSpeedLeft"> ${(rings[1].rotationalSpeedX.toFixed(2) * 102)} </span>
+  <span class="positionInsideSpeedLeft"> ${(rings[1].ringSpeedUpgrade() * 100).toFixed(3)} </span>
   <span class="positionInsideSpeedRight"> ${(rings[1].ringCost).toFixed(0)} </span>
   `
   //Animal Three
@@ -130,7 +130,7 @@ const updateText = () => {
     Cost&nbsp
   </span>
     <br>
-  <span class="positionInsideSpeedLeft"> ${(rings[2].rotationalSpeedX.toFixed(2) * 102)} </span>
+  <span class="positionInsideSpeedLeft"> ${(rings[2].ringSpeedUpgrade() * 100).toFixed(3)} </span>
   <span class="positionInsideSpeedRight"> ${(rings[2].ringCost).toFixed(0)} </span>
   `
 
@@ -141,7 +141,7 @@ const updateText = () => {
     Cost&nbsp
   </span>
     <br>
-  <span class="positionInsideSpeedLeft"> ${(rings[3].rotationalSpeedX.toFixed(2) * 102)} </span>
+  <span class="positionInsideSpeedLeft"> ${(rings[3].ringSpeedUpgrade() * 100).toFixed(3)} </span>
   <span class="positionInsideSpeedRight"> ${(rings[3].ringCost).toFixed(0)} </span>
   `
 
@@ -152,7 +152,7 @@ const updateText = () => {
     Cost&nbsp
   </span>
     <br>
-  <span class="positionInsideSpeedLeft"> ${(rings[4].rotationalSpeedX.toFixed(2) * 102)} </span>
+  <span class="positionInsideSpeedLeft"> ${(rings[4].ringSpeedUpgrade() * 100).toFixed(3)} </span>
   <span class="positionInsideSpeedRight"> ${(rings[4].ringCost).toFixed(0)} </span>
   `
 
@@ -163,7 +163,7 @@ const updateText = () => {
     Cost&nbsp
   </span>
     <br>
-  <span class="positionInsideSpeedLeft"> ${(rings[5].rotationalSpeedX.toFixed(2) * 102)} </span>
+  <span class="positionInsideSpeedLeft"> ${(rings[5].ringSpeedUpgrade() * 100).toFixed(3)} </span>
   <span class="positionInsideSpeedRight"> ${(rings[5].ringCost).toFixed(0)} </span>
   `
 
@@ -171,68 +171,68 @@ const updateText = () => {
    * Power Upgrade
    */
 
- //Animal One
- document.querySelector('#animalInfoPowerOne').innerHTML = `
+  //Animal One
+  document.querySelector('#animalInfoPowerOne').innerHTML = `
  <span class="underlineText">
    Power|
    Cost
  </span>
    <br>
  <span class="positionInsidePowerLeft"> ${(rings[0].ringPower.toFixed(2))} </span>
- <span class="positionInsidePowerRight"> ${(rings[0].ringPowerCost).toFixed(0)} </span>
+ <span class="positionInsidePowerRight"> ${Math.ceil(rings[0].ringPowerCost).toFixed(0)} </span>
  `
- //Animal Two
- document.querySelector('#animalInfoPowerTwo').innerHTML = `
+  //Animal Two
+  document.querySelector('#animalInfoPowerTwo').innerHTML = `
  <span class="underlineText">
    Power|
    Cost
  </span>
    <br>
  <span class="positionInsidePowerLeft"> ${(rings[1].ringPower.toFixed(2))} </span>
- <span class="positionInsidePowerRight"> ${(rings[1].ringPowerCost).toFixed(0)} </span>
+ <span class="positionInsidePowerRight"> ${Math.ceil(rings[1].ringPowerCost).toFixed(0)} </span>
  `
- //Animal Three
- document.querySelector('#animalInfoPowerThree').innerHTML = `
+  //Animal Three
+  document.querySelector('#animalInfoPowerThree').innerHTML = `
  <span class="underlineText">
    Power|
    Cost
  </span>
    <br>
  <span class="positionInsidePowerLeft"> ${(rings[2].ringPower.toFixed(2))} </span>
- <span class="positionInsidePowerRight"> ${(rings[2].ringPowerCost).toFixed(0)} </span>
+ <span class="positionInsidePowerRight"> ${Math.ceil(rings[2].ringPowerCost).toFixed(0)} </span>
  `
 
- //Human One
- document.querySelector('#animalInfoPowerFour').innerHTML = `
+  //Human One
+  document.querySelector('#animalInfoPowerFour').innerHTML = `
  <span class="underlineText">
    Power|
    Cost
  </span>
    <br>
  <span class="positionInsidePowerLeft"> ${(rings[3].ringPower.toFixed(2))} </span>
- <span class="positionInsidePowerRight"> ${(rings[3].ringPowerCost).toFixed(0)} </span>
+ <span class="positionInsidePowerRight"> ${Math.ceil(rings[3].ringPowerCost).toFixed(0)} </span>
  `
 
- //Human Two
- document.querySelector('#animalInfoPowerFive').innerHTML = `
+  //Human Two
+  document.querySelector('#animalInfoPowerFive').innerHTML = `
  <span class="underlineText">
    Power|
    Cost
  </span>
    <br>
  <span class="positionInsidePowerLeft"> ${(rings[4].ringPower.toFixed(2))} </span>
- <span class="positionInsidePowerRight"> ${(rings[4].ringPowerCost).toFixed(0)} </span>
+ <span class="positionInsidePowerRight"> ${Math.ceil(rings[4].ringPowerCost).toFixed(0)} </span>
  `
 
- //Human Three
- document.querySelector('#animalInfoPowerSix').innerHTML = `
+  //Human Three
+  document.querySelector('#animalInfoPowerSix').innerHTML = `
  <span class="underlineText">
    Power|
    Cost
  </span>
    <br>
  <span class="positionInsidePowerLeft"> ${(rings[5].ringPower.toFixed(2))} </span>
- <span class="positionInsidePowerRight"> ${(rings[5].ringPowerCost).toFixed(0)} </span>
+ <span class="positionInsidePowerRight"> ${Math.ceil(rings[5].ringPowerCost).toFixed(0)} </span>
  `
   // Show Levels inside of Level Section
   document.querySelector('#ringSectionOneLevel').innerHTML = `
@@ -297,11 +297,57 @@ const updateText = () => {
   `
 
   /*Section for Updating NEW RING TEXT*/
+  if (player.currentRingCount - 1 === 0) {
+    document.querySelector('#addRing').style.backgroundImage = "url('textures/rat1.png')";
+    document.querySelector('#addRing').style.backgroundSize = "cover";
 
-  document.querySelector('#addRing').innerHTML = `
-  Start Rat Engine <p></p> (A: 1) <br>
-    ${rings[5].ringSacrifice}
+    document.querySelector('#addRing').innerHTML = `
+    Start Rats Engine <p></p> (A: ${rings[0].ringPurchaseCost}) <br>
   `
+  }
+
+  if (player.currentRingCount - 1 === 1) {
+    document.querySelector('#addRing').style.backgroundImage = "url('textures/deer1.png')";
+    document.querySelector('#addRing').style.backgroundSize = "cover";
+
+    document.querySelector('#addRing').innerHTML = `
+  Start Deer Engine <p></p> (A: ${rings[1].ringPurchaseCost}) <br>
+  `
+  }
+
+  if (player.currentRingCount - 1 === 2) {
+    document.querySelector('#addRing').style.backgroundImage = "url('textures/trex1.png')";
+    document.querySelector('#addRing').style.backgroundSize = "cover";
+
+    document.querySelector('#addRing').innerHTML = `
+  Start T-Rex Engine <p></p> (A: ${rings[2].ringPurchaseCost}) <br>
+  `
+  }
+
+  if (player.currentRingCount - 1 === 3) {
+    document.querySelector('#addRingHuman').style.backgroundImage = "url('textures/trog1.png')";
+
+    document.querySelector('#addRing').innerHTML = `
+  Start Troglodyte Engine <p></p> (A: ${rings[3].ringPurchaseCost}) <br>
+  `
+  }
+
+  if (player.currentRingCount - 1 === 4) {
+    document.querySelector('#addRingHuman').style.backgroundImage = "url('textures/peasant1.png')";
+
+    document.querySelector('#addRingHuman').innerHTML = `
+  Start Peasant Engine <p></p> (A: ${rings[4].ringPurchaseCost}) <br>
+  `
+  }
+
+  if (player.currentRingCount - 1 === 5) {
+    document.querySelector('#addRingHuman').style.backgroundImage = "url('textures/alien1.png')";
+    // document.querySelector('#addRingHuman').style.backgroundSize = "cover";
+
+    document.querySelector('#addRingHuman').innerHTML = `
+  Start Alien Engine <p></p> (A: ${rings[5].ringPurchaseCost}) <br>
+  `
+  }
   // document.querySelector('#ringOne').innerHTML = `Ring One Cost: <br> ${(rings[0].ringCost).toFixed(1)}`
 }
 
@@ -353,6 +399,10 @@ const checkTorusRotations = () => {
 
     rings[5].addAnimal();
   }
+
+  // sphere.rotation.x += .11;
+  // sphere.rotation.y += .11;
+  // sphere.rotation.z += .11;
 
 }
 

@@ -37,8 +37,8 @@ const materialOne = new THREE.MeshPhongMaterial({
   color: 0x000000,
   specular: '#FF7F50',
   shininess: 15,
-  emissive: 'red',
-  emissiveIntensity: .125,
+  emissive: 'pink',
+  emissiveIntensity: .325,
   wireframe: true,
 });
 
@@ -46,7 +46,7 @@ const materialTwo = new THREE.MeshPhongMaterial({
   color: 0x000000,
   specular: '#FF7F50',
   shininess: 15,
-  emissive: 'red',
+  emissive: 'crimson',
   emissiveIntensity: .225,
   wireframe: true,
 });
@@ -55,8 +55,8 @@ const materialThree = new THREE.MeshPhongMaterial({
   color: 0x000000,
   specular: '#FF7F50',
   shininess: 15,
-  emissive: 'red',
-  emissiveIntensity: .325,
+  emissive: 'maroon',
+  emissiveIntensity: .125,
   wireframe: true,
 });
 
@@ -64,7 +64,7 @@ const materialFour = new THREE.MeshPhongMaterial({
   color: 0x000000,
   specular: '#008080',
   shininess: 15,
-  emissive: 'blue',
+  emissive: 'teal',
   emissiveIntensity: .125,
   wireframe: true,
 });
@@ -73,7 +73,7 @@ const materialFive = new THREE.MeshPhongMaterial({
   color: 0x000000,
   specular: '#008080',
   shininess: 15,
-  emissive: 'blue',
+  emissive: 'skyblue',
   emissiveIntensity: .225,
   wireframe: true,
 });
@@ -82,7 +82,7 @@ const materialSix = new THREE.MeshPhongMaterial({
   color: 0x000000,
   specular: '#008080',
   shininess: 15,
-  emissive: 'blue',
+  emissive: 'navy',
   emissiveIntensity: .325,
   wireframe: true,
 });

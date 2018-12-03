@@ -5,6 +5,11 @@
  */
 
 const player = {
+  beginIntro: 0,
+  beginIntroOne: 0,
+  beginIntroTwo: 0,
+  beginIntroThree: 0,
+
   // Ring Speed Checks 
   torusOneActivated: false,
   torusTwoActivated: false,
@@ -24,8 +29,8 @@ const player = {
   id: '',
 
   //Reanimals
-  animal: 5,
-  human: 5,
+  animal: 2,
+  human: 2,
 
   //Rings
   currentRingCount: 1,
@@ -37,10 +42,11 @@ const player = {
 
 const rings = [{
   ringNumber: 1,
+  ringPurchaseCost: 1,
   ringInitialCost: 1,
   ringInitialPowerCost: 1,
-  ringCost: 1,
-  ringPowerCost: 1,
+  ringCost: 3,
+  ringPowerCost: 5,
   ringSacrifice: 'Rat',
   ringColorOne: '',
   ringColorTwo: '',
@@ -48,16 +54,20 @@ const rings = [{
   ringPower: 1.00,
   ringLevel: 0,
   ringPowerLevel: 0,
-  rotationalSpeedX: Math.PI / 1080,
-  rotationalSpeedY: 0,
+  rotationalSpeedX: 0,
+  rotationalSpeedY: Math.PI / 1080,
+  ringSpeedUpgrade() {
+    return this.rotationalSpeedX + this.rotationalSpeedY
+  }, 
   addAnimal() {
-    player.animal +=   ((this.rotationalSpeedX) + (this.rotationalSpeedY) * this.ringPower)
+    player.animal += ((this.rotationalSpeedX) + (this.rotationalSpeedY) * this.ringPower)
   },
 
 }, {
   ringNumber: 2,
-  ringInitialCost: 2,
-  ringInitialPowerCost: 2,
+  ringPurchaseCost: 25,
+  ringInitialCost: 100,
+  ringInitialPowerCost: 250,
   ringCost: 2,
   ringPowerCost: 2,
   ringSacrifice: 'Deer',
@@ -67,16 +77,20 @@ const rings = [{
   ringPower: 1.00,
   ringLevel: 0,
   ringPowerLevel: 0,
-  rotationalSpeedX: Math.PI / 1080,
-  rotationalSpeedY: 0,
+  rotationalSpeedX: 0,
+  rotationalSpeedY: Math.PI / 1080,
+  ringSpeedUpgrade() {
+    return this.rotationalSpeedX + this.rotationalSpeedY
+  }, 
   addAnimal() {
-    player.animal +=   ((this.rotationalSpeedX) + (this.rotationalSpeedY) * this.ringPower)
+    player.animal +=   ((this.rotationalSpeedX) + (this.rotationalSpeedY)) * this.ringPower
   },
 
 }, {
   ringNumber: 3,
-  ringInitialCost: 3,
-  ringInitialPowerCost: 3,
+  ringPurchaseCost: 250,
+  ringInitialCost: 1000,
+  ringInitialPowerCost: 2500,
   ringCost: 3,
   ringPowerCost: 3,
   ringSacrifice: 'T-Rex',
@@ -86,14 +100,18 @@ const rings = [{
   ringPower: 1.00,
   ringLevel: 0,
   ringPowerLevel: 0,
-  rotationalSpeedX: Math.PI / 1080,
-  rotationalSpeedY: 0,
+  rotationalSpeedX: 0,
+  rotationalSpeedY: Math.PI / 1080,
+  ringSpeedUpgrade() {
+    return this.rotationalSpeedX + this.rotationalSpeedY
+  }, 
   addAnimal() {
     player.human +=   ((this.rotationalSpeedX) + (this.rotationalSpeedY) * this.ringPower)
   },
 
 }, {
   ringNumber: 4,
+  ringPurchaseCost: 1,
   ringInitialCost: 1,
   ringInitialPowerCost: 1,
   ringSacrifice: 'Troglodyte',
@@ -107,12 +125,16 @@ const rings = [{
   ringPowerLevel: 0,
   rotationalSpeedX: 0,
   rotationalSpeedY: Math.PI / 1080,
+  ringSpeedUpgrade() {
+    return this.rotationalSpeedX + this.rotationalSpeedY
+  }, 
   addAnimal() {
     player.human +=   ((this.rotationalSpeedX) + (this.rotationalSpeedY) * this.ringPower)
   },
 
 }, {
   ringNumber: 5,
+  ringPurchaseCost: 25,
   ringInitialCost: 2,
   ringInitialPowerCost: 2,
   ringCost: 2,
@@ -126,12 +148,16 @@ const rings = [{
   ringPower: 1.00,
   rotationalSpeedX: 0,
   rotationalSpeedY: Math.PI / 1080,
+  ringSpeedUpgrade() {
+    return this.rotationalSpeedX + this.rotationalSpeedY
+  }, 
   addAnimal() {
     player.human +=   ((this.rotationalSpeedX) + (this.rotationalSpeedY) * this.ringPower)
   },
 
 }, {
   ringNumber: 6,
+  ringPurchaseCost: 250,
   ringInitialCost: 3,
   ringInitialPowerCost: 3,
   ringCost: 3,
@@ -145,6 +171,9 @@ const rings = [{
   ringPowerLevel: 0,
   rotationalSpeedX: 0,
   rotationalSpeedY: Math.PI / 1080,
+  ringSpeedUpgrade() {
+    return this.rotationalSpeedX + this.rotationalSpeedY
+  }, 
   addAnimal() {
     player.animal +=   ((this.rotationalSpeedX) + (this.rotationalSpeedY) * this.ringPower)
   },

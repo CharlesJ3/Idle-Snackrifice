@@ -9,7 +9,7 @@
 const upgradeRingSpeedOne = () => {
   if (player.animal > rings[0].ringCost) {
     player.animal -= rings[0].ringCost;
-    rings[0].rotationalSpeedX += 0.005;
+    rings[0].rotationalSpeedX += (0.005 * (1 + rings[0].rotationalSpeedX));
 
     rings[0].ringLevel += 1;
     rings[0].ringCost = (rings[0].ringCost * 1.15) + (1 * rings[0].ringLevel);
@@ -30,7 +30,7 @@ const upgradeRingSpeedOne = () => {
 const upgradeRingSpeedTwo = () => {
   if (player.animal > rings[1].ringCost) {
     player.animal -= rings[1].ringCost;
-    rings[1].rotationalSpeedX += 0.005;
+    rings[1].rotationalSpeedX += (0.005 * (1 + rings[0].rotationalSpeedX));
 
     rings[1].ringLevel += 1;
     rings[1].ringCost = (rings[1].ringCost * 1.15) + (1 * rings[1].ringLevel);
@@ -51,7 +51,7 @@ const upgradeRingSpeedTwo = () => {
 const upgradeRingSpeedThree = () => {
   if (player.animal > rings[2].ringCost) {
     player.animal -= rings[2].ringCost;
-    rings[2].rotationalSpeedX += 0.005;
+    rings[2].rotationalSpeedX += (0.005 * (1 + rings[0].rotationalSpeedX));
 
     rings[2].ringLevel += 1;
     rings[2].ringCost = (rings[2].ringCost * 1.15) + (1 * rings[2].ringLevel);
@@ -72,7 +72,7 @@ const upgradeRingSpeedThree = () => {
 const upgradeRingSpeedFour = () => {
   if (player.human > rings[3].ringCost) {
     player.human -= rings[3].ringCost;
-    rings[3].rotationalSpeedX += 0.005;
+    rings[3].rotationalSpeedX += (0.005 * (1 + rings[0].rotationalSpeedX));
 
     rings[3].ringLevel += 1;
     rings[3].ringCost = (rings[3].ringCost * 1.15) + (1 * rings[3].ringLevel);
@@ -93,7 +93,7 @@ const upgradeRingSpeedFour = () => {
 const upgradeRingSpeedFive = () => {
   if (player.human > rings[4].ringCost) {
     player.human -= rings[4].ringCost;
-    rings[4].rotationalSpeedX += 0.005;
+    rings[4].rotationalSpeedX += (0.005 * (1 + rings[0].rotationalSpeedX));
 
     rings[4].ringLevel += 1;
     rings[4].ringCost = (rings[4].ringCost * 1.15) + (1 * rings[4].ringLevel);
@@ -114,7 +114,7 @@ const upgradeRingSpeedFive = () => {
 const upgradeRingSpeedSix = () => {
   if (player.human > rings[5].ringCost) {
     player.human -= rings[5].ringCost;
-    rings[5].rotationalSpeedX += 0.005;
+    rings[5].rotationalSpeedX += (0.005 * (1 + rings[0].rotationalSpeedX));
 
     rings[5].ringLevel += 1;
     rings[5].ringCost = (rings[5].ringCost * 1.15) + (1 * rings[5].ringLevel);
@@ -140,16 +140,20 @@ const upgradeRingSpeedSix = () => {
 const upgradeRingPowerOne = () => {
   if (player.animal > rings[0].ringPowerCost) {
     player.animal -= rings[0].ringPowerCost;
-    rings[0].ringPower += (0.02 * rings[0].ringPower);
+    rings[0].ringPower += (0.2 * rings[0].ringPower);
 
     rings[0].ringPowerLevel += 1;
     rings[0].ringPowerCost = (rings[0].ringPowerCost * 1.15) + (1 * rings[0].ringPowerLevel);
 
     function flashLights() {
-      if (materialOne.emissiveIntensity <= 1.5) {
-        materialOne.emissiveIntensity += .02
-        setTimeout(flashLights, 100);
+      if (materialOne.emissiveIntensity <= 1) {
+
+        materialOne.emissiveIntensity += .01
+        materialOne.wireframe = false;
+
+        setTimeout(flashLights, 50);
       } else {
+        materialOne.wireframe = true;
         materialOne.emissiveIntensity = materialDefaults.materialEmissiveOneIntensity;
       }
     }
@@ -157,6 +161,133 @@ const upgradeRingPowerOne = () => {
     flashLights();
   }
 }
+
+const upgradeRingPowerTwo = () => {
+  if (player.animal > rings[1].ringPowerCost) {
+    player.animal -= rings[1].ringPowerCost;
+    rings[1].ringPower += (0.02 * rings[1].ringPower);
+
+    rings[1].ringPowerLevel += 1;
+    rings[1].ringPowerCost = (rings[1].ringPowerCost * 1.15) + (1 * rings[1].ringPowerLevel);
+
+    function flashLights() {
+      if (materialTwo.emissiveIntensity <= 1) {
+
+        materialTwo.emissiveIntensity += .01
+        materialTwo.wireframe = false;
+
+        setTimeout(flashLights, 50);
+      } else {
+        materialTwo.wireframe = true;
+        materialTwo.emissiveIntensity = materialDefaults.materialEmissiveTwoIntensity;
+      }
+    }
+
+    flashLights();
+  }
+}
+
+
+const upgradeRingPowerThree = () => {
+  if (player.animal > rings[2].ringPowerCost) {
+    player.animal -= rings[2].ringPowerCost;
+    rings[2].ringPower += (0.02 * rings[2].ringPower);
+
+    rings[2].ringPowerLevel += 1;
+    rings[2].ringPowerCost = (rings[2].ringPowerCost * 1.15) + (1 * rings[2].ringPowerLevel);
+
+    function flashLights() {
+      if (materialThree.emissiveIntensity <= 1) {
+
+        materialThree.emissiveIntensity += .01
+        materialThree.wireframe = false;
+
+        setTimeout(flashLights, 50);
+      } else {
+        materialThree.wireframe = true;
+        materialThree.emissiveIntensity = materialDefaults.materialEmissiveThreeIntensity;
+      }
+    }
+
+    flashLights();
+  }
+}
+
+const upgradeRingPowerFour = () => {
+  if (player.human > rings[3].ringPowerCost) {
+    player.human -= rings[3].ringPowerCost;
+    rings[3].ringPower += (0.02 * rings[3].ringPower);
+
+    rings[3].ringPowerLevel += 1;
+    rings[3].ringPowerCost = (rings[3].ringPowerCost * 1.15) + (1 * rings[3].ringPowerLevel);
+
+    function flashLights() {
+      if (materialFour.emissiveIntensity <= 1) {
+
+        materialFour.emissiveIntensity += .01
+        materialFour.wireframe = false;
+
+        setTimeout(flashLights, 50);
+      } else {
+        materialFour.wireframe = true;
+        materialFour.emissiveIntensity = materialDefaults.materialEmissiveFourIntensity;
+      }
+    }
+
+    flashLights();
+  }
+}
+
+const upgradeRingPowerFive = () => {
+  if (player.human > rings[4].ringPowerCost) {
+    player.human -= rings[4].ringPowerCost;
+    rings[4].ringPower += (0.02 * rings[4].ringPower);
+
+    rings[4].ringPowerLevel += 1;
+    rings[4].ringPowerCost = (rings[4].ringPowerCost * 1.15) + (1 * rings[4].ringPowerLevel);
+
+    function flashLights() {
+      if (materialFive.emissiveIntensity <= 1) {
+
+        materialFive.emissiveIntensity += .01
+        materialFive.wireframe = false;
+
+        setTimeout(flashLights, 50);
+      } else {
+        materialFive.wireframe = true;
+        materialFive.emissiveIntensity = materialDefaults.materialEmissiveFiveIntensity;
+      }
+    }
+
+    flashLights();
+  }
+}
+
+const upgradeRingPowerSix = () => {
+  if (player.human > rings[5].ringPowerCost) {
+    player.human -= rings[5].ringPowerCost;
+    rings[5].ringPower += (0.02 * rings[5].ringPower);
+
+    rings[5].ringPowerLevel += 1;
+    rings[5].ringPowerCost = (rings[5].ringPowerCost * 1.15) + (1 * rings[5].ringPowerLevel);
+
+    function flashLights() {
+      if (materialSix.emissiveIntensity <= 1) {
+
+        materialSix.emissiveIntensity += .01
+        materialSix.wireframe = false;
+
+        setTimeout(flashLights, 50);
+      } else {
+        materialSix.wireframe = true;
+        materialSix.emissiveIntensity = materialDefaults.materialEmissiveSixIntensity;
+      }
+    }
+
+    flashLights();
+  }
+}
+
 /**
  * Adding or Removing Test Objects
  */
@@ -206,6 +337,8 @@ const addNewRingToArray = () => {
   if( player.currentRingCount - 1 < 3) {
     //TODO : Change to object.js for dynamic values, currently static
     let setVariableNameForTorus = `torus${player.permanentRingCountForVariableNames}`;
+
+    document.querySelector('#intro').style.display = 'none';
 
     switch (setVariableNameForTorus) {
       case 'torus1':
@@ -258,9 +391,10 @@ const addNewHumanRingToArray = () => {
 // Torus One
 
 const runTorusOne = () => {
-  if (player.animal >= rings[0].ringCost) {
+  if (player.animal >= rings[0].ringPurchaseCost) {
+    player.animal - rings[0].ringPurchaseCost
     // This is the standard "Create-an-Object" template
-    let mainTorus = new THREE.TorusGeometry(5, 1, 4, 100);
+    let mainTorus = new THREE.TorusGeometry(5, 1.3, 4, 100);
     let torus = new THREE.Mesh(mainTorus, materialOne);
     torus.name = 'torus';
     scene.add(torus);
@@ -287,9 +421,10 @@ const runTorusOne = () => {
 // Torus Two
 
 const runTorusTwo = () => {
-  if (player.animal >= rings[1].ringCost) {
+  if (player.animal >= rings[1].ringPurchaseCost) {
+    player.animal - rings[1].ringPurchaseCost
     // This is the standard "Create-an-Object" template
-    let mainTorusTwo = new THREE.TorusGeometry(9, 1.65, 4, 100);
+    let mainTorusTwo = new THREE.TorusGeometry(9, 1.45, 4, 100);
     let torusTwo = new THREE.Mesh(mainTorusTwo, materialTwo);
     torusTwo.name = 'torusTwo';
     scene.add(torusTwo);
@@ -320,9 +455,10 @@ const runTorusTwo = () => {
 // Torus Three
 
 const runTorusThree = () => {
-  if (player.animal >= rings[2].ringCost) {
+  if (player.animal >= rings[2].ringPurchaseCost) {
+    player.animal - rings[2].ringPurchaseCost
     // This is the standard "Create-an-Object" template
-    let mainTorusThree = new THREE.TorusGeometry(13, 2.95, 4, 100);
+    let mainTorusThree = new THREE.TorusGeometry(13, 1.95, 4, 100);
     let torusThree = new THREE.Mesh(mainTorusThree, materialThree);
     torusThree.name = 'torusThree';
     scene.add(torusThree);
@@ -353,9 +489,10 @@ const runTorusThree = () => {
 // Torus Four
 
 const runTorusFour = () => {
-  if (player.human >= rings[3].ringCost && player.currentRingCount -1 > 2) {
+  if (player.human >= rings[3].ringPurchaseCost && player.currentRingCount -1 > 2) {
+    player.human - rings[3].ringPurchaseCost;
     // This is the standard "Create-an-Object" template
-    let mainTorusFour = new THREE.TorusGeometry(17, 1.25, 4, 100);
+    let mainTorusFour = new THREE.TorusGeometry(17, 2.45, 4, 100);
     let torusFour = new THREE.Mesh(mainTorusFour, materialFour);
     torusFour.name = 'torusFour';
     scene.add(torusFour);
@@ -388,10 +525,10 @@ const runTorusFour = () => {
 // Torus Five
 
 const runTorusFive = () => {
-  if (player.human >= rings[4].ringCost && player.currentRingCount -1 > 2) {
-
+  if (player.human >= rings[4].ringPurchaseCost && player.currentRingCount -1 > 2) {
+    player.human - rings[4].ringPurchaseCost;
     // This is the standard "Create-an-Object" template
-    let mainTorusFive = new THREE.TorusGeometry(24, 1.55, 5, 100);
+    let mainTorusFive = new THREE.TorusGeometry(24, 3.05, 5, 100);
     let torusFive = new THREE.Mesh(mainTorusFive, materialFive);
     torusFive.name = 'torusFive';
     scene.add(torusFive);
@@ -421,9 +558,11 @@ const runTorusFive = () => {
 // Torus Six
 
 const runTorusSix = () => {
-  if (player.human >= rings[5].ringCost && player.currentRingCount -1 > 2) {
+  if (player.human >= rings[5].ringPurchaseCost && player.currentRingCount -1 > 2) {
+    player.human - rings[5].ringPurchaseCost;
+
     // This is the standard "Create-an-Object" template
-    let mainTorusSix = new THREE.TorusGeometry(31, 1.85, 6, 100);
+    let mainTorusSix = new THREE.TorusGeometry(31, 4.35, 6, 100);
     let torusSix = new THREE.Mesh(mainTorusSix, materialSix);
     torusSix.name = 'torusSix';
     scene.add(torusSix);
@@ -525,6 +664,8 @@ $('.menuTable').hover(
  */
 
 const checkForPurchaseAvailability = () => {
+
+  //Speed
   if (player.animal >= rings[0].ringCost) {
     document.getElementById("animalInfoOne").style.color = 'white';
     document.getElementById("checkAvailabilityOneB").style.color = 'white';
@@ -573,11 +714,61 @@ const checkForPurchaseAvailability = () => {
     document.getElementById("checkAvailabilitySixB").style.color = 'red';
   }
 
+  //Power
+  if (player.animal >= rings[0].ringPowerCost) {
+    document.getElementById("animalInfoPowerOne").style.color = 'white';
+    document.getElementById("checkAvailabilityPowerOneB").style.color = 'white';
+  } else {
+    document.getElementById("animalInfoPowerOne").style.color = 'red';
+    document.getElementById("checkAvailabilityPowerOneB").style.color = 'red';
+  }
+
+  if (player.animal >= rings[1].ringPowerCost) {
+    document.getElementById("animalInfoPowerTwo").style.color = 'white';
+    document.getElementById("checkAvailabilityPowerTwoB").style.color = 'white';
+  } else {
+    document.getElementById("animalInfoPowerTwo").style.color = 'red';
+    document.getElementById("checkAvailabilityPowerTwoB").style.color = 'red';
+  }
+
+  if (player.animal >= rings[2].ringPowerCost) {
+    document.getElementById("animalInfoPowerThree").style.color = 'white';
+    document.getElementById("checkAvailabilityPowerThreeB").style.color = 'white';
+  } else {
+    document.getElementById("animalInfoPowerThree").style.color = 'red';
+    document.getElementById("checkAvailabilityPowerThreeB").style.color = 'red';
+  }
+
+  if (player.human >= rings[3].ringPowerCost) {
+    document.getElementById("animalInfoPowerFour").style.color = 'white';
+    document.getElementById("checkAvailabilityPowerFourB").style.color = 'white';
+  } else {
+    document.getElementById("animalInfoPowerFour").style.color = 'red';
+    document.getElementById("checkAvailabilityPowerFourB").style.color = 'red';
+  }
+
+  if (player.human >= rings[4].ringPowerCost) {
+    document.getElementById("animalInfoPowerFive").style.color = 'white';
+    document.getElementById("checkAvailabilityPowerFiveB").style.color = 'white';
+  } else {
+    document.getElementById("animalInfoPowerFive").style.color = 'red';
+    document.getElementById("checkAvailabilityPowerFiveB").style.color = 'red';
+  }
+
+  if (player.human >= rings[5].ringPowerCost) {
+    document.getElementById("animalInfoPowerSix").style.color = 'white';
+    document.getElementById("checkAvailabilityPowerSixB").style.color = 'white';
+  } else {
+    document.getElementById("animalInfoPowerSix").style.color = 'red';
+    document.getElementById("checkAvailabilityPowerSixB").style.color = 'red';
+  }
+
+
   //For Ring Adding
   let w;
 
   if(player.permanentRingCountForVariableNames - 1 !== 6) {
-    w = rings[player.permanentRingCountForVariableNames - 1].ringInitialCost;
+    w = rings[player.permanentRingCountForVariableNames - 1].ringPurchaseCost;
   }
   const x = player.currentRingCount - 1;
   
@@ -618,7 +809,7 @@ const checkForPurchaseAvailability = () => {
 }
 
 
-setInterval(checkForPurchaseAvailability, 250);
+setInterval(checkForPurchaseAvailability, 200);
 
 
 // Show UI or Hide UI
@@ -630,3 +821,39 @@ const showOrHide = (checkbox) => {
     document.getElementById('wrapper').style.display = 'none';
   }
 }
+
+const showOrHideTwo = (checkbox) => {
+  if (checkbox.checked != true) {
+    document.getElementById('tutorial').style.display = 'none';
+  } else {
+    document.getElementById('tutorial').style.display = 'inherit';
+  }
+}
+
+// Build Introduction
+
+const introduction = () => {
+  function introduceMe() {
+    if (player.beginIntro <= 3.5) {
+      player.beginIntro += .1
+      setTimeout(introduceMe, 100);
+
+    } else {
+      document.querySelector('#wrapper').style.display = 'inherit';
+      document.querySelector('#wrapper').classList.add = 'fadeIn';
+      document.getElementById('showOrHide').style.display = 'inherit';
+      // document.getElementById('intro').style.display = 'none';
+      document.querySelector('#intro').classList.add = 'fadeOut'
+    }
+  }
+
+  if (player.beginIntro >= 5) {
+    setTimeout(introduceMe, 100);
+    document.querySelector('#wrapper').style.display = 'inherit';
+  }
+
+
+  introduceMe();
+}
+
+introduction();

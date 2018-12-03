@@ -10,16 +10,29 @@
 </head>
 
 <body>
-    <canvas id="battleArea"></canvas> 
+  <canvas id="battleArea"></canvas>
 
-    <div id="showOrHide">
+  <div id="showOrHide">
 
-        <input name="showOrHideAll" onclick="showOrHide(showOrHideAll)" type="checkbox" value="show" id="showOrHideAll">Hide UI?<br>
-        <!-- <input name="showOrHideAllTwo" onclick="showOrHide(showOrHideAll)" type="checkbox" value="sh" id="sho">Tutorial!<br> -->
-    </div>
+    <input name="showOrHideAll" onclick="showOrHide(showOrHideAll)" type="checkbox" value="show" id="showOrHideAll">Hide
+    <br>
+    <input name="showOrHideTutorial" onclick="showOrHideTwo(showOrHideTutorial)" type="checkbox" value="show2" id="showOrHideTutorial">Tutorial<br>
+  </div>
+
+  <div id="intro">
+    <h1>
+    <div id="firstGuide">Hurry! Feed it a rat!<img id="firstGuideImage" src="textures/arrow.gif"></div>
+    <span id="introWord" class="fadeIn">Demon: </span> 
+    <span id="introWordOne" class="fadeIn">Where's</span> 
+    <span id="introWordTwo" class="fadeInTwo">my</span> 
+    <span id="introWordThree" class="fadeInThree">SNACKRIFICE!</span> 
+    </h1>
+  </div>
 
   <!-- Main Battle Area -->
   <div id="wrapper">
+    <!-- Show Tutorial -->
+    <div id="tutorial"></div>
 
     <!-- UI Sections -->
     <div id="header">
@@ -96,7 +109,7 @@
 
               <p class="showTextSlowly" id="animalInfoPowerTwo" class="hide"></p>
               <div id="checkAvailabilityPowerTwoB" onclick="upgradeRingPowerTwo()">Upgrade</div>
-              
+
             </td>
             <td class="ringSection ringSectionThree">
 
@@ -113,7 +126,7 @@
 
               <p class="showTextSlowly" id="animalInfoPowerThree" class="hide"></p>
               <div id="checkAvailabilityPowerThreeB" onclick="upgradeRingPowerThree()">Upgrade</div>
-              
+
             </td>
           </tr>
         </table>
@@ -139,7 +152,7 @@
 
             <p class="showTextSlowly" id="animalInfoPowerFour" class="hide"></p>
             <div id="checkAvailabilityPowerFourB" onclick="upgradeRingPowerFour()">Upgrade</div>
-              
+
 
           </td>
           <td class="ringSection ringSectionFive showTextSlowly">
@@ -157,7 +170,7 @@
 
             <p class="showTextSlowly" id="animalInfoPowerFive" class="hide"></p>
             <div id="checkAvailabilityPowerFiveB" onclick="upgradeRingPowerFive()">Upgrade</div>
-              
+
 
           </td>
           <td class="ringSection ringSectionSix showTextSlowly">
@@ -175,7 +188,7 @@
 
             <p class="showTextSlowly" id="animalInfoPowerSix" class="hide"></p>
             <div id="checkAvailabilityPowerSixB" onclick="upgradeRingPowerSix()">Upgrade</div>
-              
+
 
           </td>
         </tr>
