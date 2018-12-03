@@ -7,62 +7,139 @@
  */
 
 const upgradeRingSpeedOne = () => {
-  if (player.animal > rings[0].ringAnimalCost) {
-    player.animal -= rings[0].ringAnimalCost;
-    rings[0].rotationalSpeedX += 0.015;
+  if (player.animal > rings[0].ringCost) {
+    player.animal -= rings[0].ringCost;
+    rings[0].rotationalSpeedX += 0.005;
 
-    rings[0].ringLevel = 1;
-    rings[0].ringAnimalCost = (rings[0].ringAnimalCost * 1.15) + (1 * rings[0].ringLevel);
+    rings[0].ringLevel += 1;
+    rings[0].ringCost = (rings[0].ringCost * 1.15) + (1 * rings[0].ringLevel);
+
+    function flashLights() {
+      if (materialOne.emissiveIntensity <= 1.5) {
+        materialOne.emissiveIntensity += .02
+        setTimeout(flashLights, 100);
+      } else {
+        materialOne.emissiveIntensity = materialDefaults.materialEmissiveOneIntensity;
+      }
+    }
+
+    flashLights();
+
+    // function showLights(){
+    //   for(i = 0; i < 10; i++) {
+    //     materialOne.emissiveIntensity += .01;
+    //     setTimeout(function () {
+    //       materialOne.emissiveIntensity += .01;
+    //       console.log('sup');
+    //     }, 500);
+    //   }
+    //  }
+    //  showLights();
   }
 }
 
 const upgradeRingSpeedTwo = () => {
-  if (player.animal > rings[1].ringAnimalCost) {
-    player.animal -= rings[1].ringAnimalCost;
-    rings[1].rotationalSpeedX += 0.015;
+  if (player.animal > rings[1].ringCost) {
+    player.animal -= rings[1].ringCost;
+    rings[1].rotationalSpeedX += 0.005;
 
-    rings[1].ringLevel = 1;
-    rings[1].ringAnimalCost = (rings[1].ringAnimalCost * 1.15) + (1 * rings[1].ringLevel);
+    rings[1].ringLevel += 1;
+    rings[1].ringCost = (rings[1].ringCost * 1.15) + (1 * rings[1].ringLevel);
+
+    function flashLights() {
+      if (materialTwo.emissiveIntensity <= 1.5) {
+        materialTwo.emissiveIntensity += .02
+        setTimeout(flashLights, 100);
+      } else {
+        materialTwo.emissiveIntensity = materialDefaults.materialEmissiveTwoIntensity;
+      }
+    }
+
+    flashLights();
   }
 }
 
 const upgradeRingSpeedThree = () => {
-  if (player.animal > rings[2].ringAnimalCost) {
-    player.animal -= rings[2].ringAnimalCost;
-    rings[2].rotationalSpeedX += 0.015;
+  if (player.animal > rings[2].ringCost) {
+    player.animal -= rings[2].ringCost;
+    rings[2].rotationalSpeedX += 0.005;
 
-    rings[2].ringLevel = 1;
-    rings[2].ringAnimalCost = (rings[2].ringAnimalCost * 1.15) + (1 * rings[2].ringLevel);
+    rings[2].ringLevel += 1;
+    rings[2].ringCost = (rings[2].ringCost * 1.15) + (1 * rings[2].ringLevel);
+
+    function flashLights() {
+      if (materialThree.emissiveIntensity <= 1.5) {
+        materialThree.emissiveIntensity += .02
+        setTimeout(flashLights, 100);
+      } else {
+        materialThree.emissiveIntensity = materialDefaults.materialEmissiveThreeIntensity;
+      }
+    }
+
+    flashLights();
   }
 }
 
 const upgradeRingSpeedFour = () => {
-  if (player.animal > rings[3].ringAnimalCost) {
-    player.animal -= rings[3].ringAnimalCost;
-    rings[3].rotationalSpeedX += 0.015;
+  if (player.human > rings[3].ringCost) {
+    player.human -= rings[3].ringCost;
+    rings[3].rotationalSpeedX += 0.005;
 
-    rings[3].ringLevel = 1;
-    rings[3].ringAnimalCost = (rings[3].ringAnimalCost * 1.15) + (1 * rings[3].ringLevel);
+    rings[3].ringLevel += 1;
+    rings[3].ringCost = (rings[3].ringCost * 1.15) + (1 * rings[3].ringLevel);
+
+    function flashLights() {
+      if (materialFour.emissiveIntensity <= 1.5) {
+        materialFour.emissiveIntensity += .02
+        setTimeout(flashLights, 100);
+      } else {
+        materialFour.emissiveIntensity = materialDefaults.materialEmissiveFourIntensity;
+      }
+    }
+
+    flashLights();
   }
 }
 
 const upgradeRingSpeedFive = () => {
-  if (player.animal > rings[4].ringAnimalCost) {
-    player.animal -= rings[4].ringAnimalCost;
-    rings[4].rotationalSpeedX += 0.015;
+  if (player.human > rings[4].ringCost) {
+    player.human -= rings[4].ringCost;
+    rings[4].rotationalSpeedX += 0.005;
 
-    rings[4].ringLevel = 1;
-    rings[4].ringAnimalCost = (rings[4].ringAnimalCost * 1.15) + (1 * rings[4].ringLevel);
+    rings[4].ringLevel += 1;
+    rings[4].ringCost = (rings[4].ringCost * 1.15) + (1 * rings[4].ringLevel);
+
+    function flashLights() {
+      if (materialFive.emissiveIntensity <= 1.5) {
+        materialFive.emissiveIntensity += .02
+        setTimeout(flashLights, 100);
+      } else {
+        materialFive.emissiveIntensity = materialDefaults.materialEmissiveFiveIntensity;
+      }
+    }
+
+    flashLights();
   }
 }
 
 const upgradeRingSpeedSix = () => {
-  if (player.animal > rings[5].ringAnimalCost) {
-    player.animal -= rings[5].ringAnimalCost;
-    rings[5].rotationalSpeedX += 0.015;
+  if (player.human > rings[5].ringCost) {
+    player.human -= rings[5].ringCost;
+    rings[5].rotationalSpeedX += 0.005;
 
-    rings[5].ringLevel = 1;
-    rings[5].ringAnimalCost = (rings[5].ringAnimalCost * 1.15) + (1 * rings[5].ringLevel);
+    rings[5].ringLevel += 1;
+    rings[5].ringCost = (rings[5].ringCost * 1.15) + (1 * rings[5].ringLevel);
+
+    function flashLights() {
+      if (materialSix.emissiveIntensity <= 1.5) {
+        materialSix.emissiveIntensity += .02
+        setTimeout(flashLights, 100);
+      } else {
+        materialSix.emissiveIntensity = materialDefaults.materialEmissiveSixIntensity;
+      }
+    }
+
+    flashLights();
   }
 }
 /**
@@ -73,7 +150,8 @@ const upgradeRingSpeedSix = () => {
 // Removes all objects 
 
 //TODO : REMOVE ONE
-//TODO ISSUE: unable to correctly snag the player.torus???Activated and set it to false; will cause game-freezing bug
+//TODO ISSUE: unable to correctly snag the player.torus???
+//Activated and set it to false; will cause game-freezing bug
 
 const removeAllObjects = () => {
   for (var i = scene.children.length - 1; i >= 0; i--) {
@@ -91,16 +169,13 @@ const removeAllObjectsExceptMainSphere = () => {
     scene.remove(obj);
   }
 
-  player.torusOneActivated = false;
-  player.torusTwoActivated = false;
-  player.torusThreeActivated = false;
-  player.torusFourActivated = false;
-  player.torusFiveActivated = false;
-  player.torusSixActivated = false;
-  player.torusSevenActivated = false;
-  player.torusEightActivated = false;
-  player.torusNineActivated = false;
-  player.torusTenActivated = false;
+  // player.torusOneActivated = false;
+  // player.torusTwoActivated = false;
+  // player.torusThreeActivated = false;
+  // player.torusFourActivated = false;
+  // player.torusFiveActivated = false;
+  // player.torusSixActivated = false;
+
 
   let sphere = new THREE.Mesh(mainSphere, material);
   scene.add(sphere);
@@ -113,151 +188,166 @@ const removeAllObjectsExceptMainSphere = () => {
 
 const addNewRingToArray = () => {
 
-  // For reference, a Torus is the following:
+  if( player.currentRingCount - 1 < 3) {
+    //TODO : Change to object.js for dynamic values, currently static
+    let setVariableNameForTorus = `torus${player.permanentRingCountForVariableNames}`;
 
-  // radius             - Radius of the torus, from the center of the torus to the center of the tube. Default is 1. 
-  // tube               - Radius of the tube. Default is 0.4. 
-  // radialSegments     - Default is 8 
-  // tubularSegments    - Default is 6. 
-  // arc                - Central angle. Default is Math.PI * 2.
-
-  //TODO : Change to object.js for dynamic values, currently static
-  let setVariableNameForTorus = `torus${player.permanentRingCountForVariableNames}`;
-
-  switch (setVariableNameForTorus) {
-    case 'torus1':
-      runTorusOne();
-      break;
-    case 'torus2':
-      runTorusTwo();
-      break;
-    case 'torus3':
-      runTorusThree();
-      break;
-    case 'torus4':
-      runTorusFour();
-      break;
-    case 'torus5':
-      runTorusFive();
-      break;
-    case 'torus6':
-      runTorusSix();
-      break;
-    case 'torus7':
-      runTorusSeven();
-      break;
-    case 'torus8':
-      runTorusEight();
-      break;
-    case 'torus9':
-      runTorusNine();
-      break;
-    case 'torus10':
-      runTorusTen();
-      break;
+    switch (setVariableNameForTorus) {
+      case 'torus1':
+        runTorusOne();
+        break;
+      case 'torus2':
+        runTorusTwo();
+        break;
+      case 'torus3':
+        runTorusThree();
+        break;
+    }
+  } else{
+    //
   }
-
-  player.permanentRingCountForVariableNames++;
 }
 
+const addNewHumanRingToArray = () => {
+  if( player.currentRingCount - 1 >= 3) {
+    //TODO : Change to object.js for dynamic values, currently static
+    let setVariableNameForTorus = `torus${player.permanentRingCountForVariableNames}`;
+
+    switch (setVariableNameForTorus) {
+      case 'torus4':
+        runTorusFour();
+        break;
+      case 'torus5':
+        runTorusFive();
+        break;
+      case 'torus6':
+        runTorusSix();
+        break;
+    }
+  } else{
+  }
+}
+/**
+ * TORUS'
+ */
+
+
+// For reference, a Torus is the following:
+
+// radius             - Radius of the torus, from the center of the torus to the center of the tube. Default is 1. 
+// tube               - Radius of the tube. Default is 0.4. 
+// radialSegments     - Default is 8 
+// tubularSegments    - Default is 6. 
+// arc                - Central angle. Default is Math.PI * 2.
 
 // Torus One
 
 const runTorusOne = () => {
-  if (player.animal >= rings[0].ringAnimalCost) {
+  if (player.animal >= rings[0].ringCost) {
     // This is the standard "Create-an-Object" template
-    let mainTorus = new THREE.TorusGeometry(5, .35, 4, 100);
-    let torus = new THREE.Mesh(mainTorus, material);
+    let mainTorus = new THREE.TorusGeometry(5, 1, 4, 100);
+    let torus = new THREE.Mesh(mainTorus, materialOne);
     torus.name = 'torus';
     scene.add(torus);
-    torus.position.y = 5;
+    torus.position.y = 3;
 
     // Turn the spinner on when you activate the torus
     player.torusOneActivated = true;
 
     torusAddOne = torus1;
     torus.add(torusAddOne);
-  }
+    player.permanentRingCountForVariableNames++;
+    player.currentRingCount++;
+  } 
 }
 
 // Torus Two
 
 const runTorusTwo = () => {
-  if (player.animal >= rings[1].ringAnimalCost) {
+  if (player.animal >= rings[1].ringCost) {
     // This is the standard "Create-an-Object" template
-    let mainTorusTwo = new THREE.TorusGeometry(9, .65, 4, 100);
-    let torusTwo = new THREE.Mesh(mainTorusTwo, material);
+    let mainTorusTwo = new THREE.TorusGeometry(9, 1.65, 4, 100);
+    let torusTwo = new THREE.Mesh(mainTorusTwo, materialTwo);
     torusTwo.name = 'torusTwo';
     scene.add(torusTwo);
-    torusTwo.position.y = 5;
+    torusTwo.position.y = 3;
+
     // Turn the spinner on when you activate the torus
     player.torusTwoActivated = true;
 
+    // Update camera POV a bit to adjust to it!
+    camera.position.z = 500;
+
     torusAddTwo = torus2;
     torusTwo.add(torusAddTwo);
+    player.permanentRingCountForVariableNames++;
+    player.currentRingCount++;
   }
 }
 
 // Torus Three
 
 const runTorusThree = () => {
-  if (player.animal >= rings[2].ringAnimalCost) {
+  if (player.animal >= rings[2].ringCost) {
     // This is the standard "Create-an-Object" template
-    let mainTorusThree = new THREE.TorusGeometry(13, .95, 4, 100);
-    let torusThree = new THREE.Mesh(mainTorusThree, material);
+    let mainTorusThree = new THREE.TorusGeometry(13, 2.95, 4, 100);
+    let torusThree = new THREE.Mesh(mainTorusThree, materialThree);
     torusThree.name = 'torusThree';
     scene.add(torusThree);
-    torusThree.position.y = 5;
+    torusThree.position.y = 3;
 
     // Turn the spinner on when you activate the torus
     player.torusThreeActivated = true;
 
     // Update camera POV a bit to adjust to it!
-    camera.position.z = 75;
+    camera.position.z = 555;
 
     torusAddThree = torus3;
     torusThree.add(torusAddThree);
+    player.permanentRingCountForVariableNames++;
+    player.currentRingCount++;
   }
 }
 
 // Torus Four
 
 const runTorusFour = () => {
-  if (player.animal >= rings[3].ringAnimalCost) {
+  if (player.human >= rings[3].ringCost && player.currentRingCount -1 > 2) {
     // This is the standard "Create-an-Object" template
     let mainTorusFour = new THREE.TorusGeometry(17, 1.25, 4, 100);
-    let torusFour = new THREE.Mesh(mainTorusFour, material);
+    let torusFour = new THREE.Mesh(mainTorusFour, materialFour);
     torusFour.name = 'torusFour';
     scene.add(torusFour);
-    torusFour.position.y = 5;
+    torusFour.position.y = 3;
 
     // Turn the spinner on when you activate the torus
     player.torusFourActivated = true;
 
     // Update camera POV a bit to adjust to it!
-    camera.position.z = 85;
+    camera.position.z = 635;
 
-    torusAddFour = torus4;
-    torusFour.add(torusAddFour);
+    player.permanentRingCountForVariableNames++;
+    player.currentRingCount++;
   }
 }
 
 // Torus Five
 
 const runTorusFive = () => {
-  if (player.animal >= rings[4].ringAnimalCost) {
+  if (player.human >= rings[4].ringCost && player.currentRingCount -1 > 2) {
+
     // This is the standard "Create-an-Object" template
     let mainTorusFive = new THREE.TorusGeometry(24, 1.55, 5, 100);
-    let torusFive = new THREE.Mesh(mainTorusFive, material);
+    let torusFive = new THREE.Mesh(mainTorusFive, materialFive);
     torusFive.name = 'torusFive';
     scene.add(torusFive);
-    torusFive.position.y = 5;
+    torusFive.position.y = 3;
 
     // Turn the spinner on when you activate the torus
     player.torusFiveActivated = true;
 
     // Update camera POV a bit to adjust to it!
-    camera.position.z = 105;
+    camera.position.z = 755;
 
     // On Torus Five and above, we'll start increasing the max camera distance
     // camera.fov = 65;
@@ -265,25 +355,27 @@ const runTorusFive = () => {
 
     torusAddFive = torus5;
     torusFive.add(torusAddFive);
+    player.permanentRingCountForVariableNames++;
+    player.currentRingCount++;
   }
 }
 
 // Torus Six
 
 const runTorusSix = () => {
-  if (player.animal >= rings[5].ringAnimalCost) {
+  if (player.human >= rings[5].ringCost && player.currentRingCount -1 > 2) {
     // This is the standard "Create-an-Object" template
     let mainTorusSix = new THREE.TorusGeometry(31, 1.85, 6, 100);
-    let torusSix = new THREE.Mesh(mainTorusSix, material);
+    let torusSix = new THREE.Mesh(mainTorusSix, materialSix);
     torusSix.name = 'torusSix';
     scene.add(torusSix);
-    torusSix.position.y = 5;
+    torusSix.position.y = 3;
 
     // Turn the spinner on when you activate the torus
     player.torusSixActivated = true;
 
     // Update camera POV a bit to adjust to it!
-    camera.position.z = 115;
+    camera.position.z = 855;
 
     // On Torus Five and above, we'll start increasing the max camera distance
     // camera.fov = 70;
@@ -291,167 +383,17 @@ const runTorusSix = () => {
 
     torusAddSix = torus6;
     torusSix.add(torusAddSix);
+    player.permanentRingCountForVariableNames++;
+    player.currentRingCount++;
   }
 }
 
-// Torus Seven
-
-const runTorusSeven = () => {
-  if (player.animal >= rings[6].ringAnimalCost) {
-    // This is the standard "Create-an-Object" template
-    let mainTorusSeven = new THREE.TorusGeometry(37, 2.15, 7, 100);
-    let torusSeven = new THREE.Mesh(mainTorusSeven, material);
-    torusSeven.name = 'torusSeven';
-    scene.add(torusSeven);
-    torusSeven.position.y = 5;
-
-    // Turn the spinner on when you activate the torus
-    player.torusSevenActivated = true;
-
-    // Update camera POV a bit to adjust to it!
-    camera.position.z = 135;
-
-    // On Torus Five and above, we'll start increasing the max camera distance
-    // camera.fov = 80;
-    // camera.updateProjectionMatrix();
-
-    torusAddSeven = torus7;
-    torusSeven.add(torusAddSeven);
-  }
-}
-
-// Torus Eight
-
-const runTorusEight = () => {
-  if (player.animal >= rings[7].ringAnimalCost) {
-    // This is the standard "Create-an-Object" template
-    let mainTorusEight = new THREE.TorusGeometry(45, 2.55, 8, 100);
-    let torusEight = new THREE.Mesh(mainTorusEight, material);
-    torusEight.name = 'torusEight';
-    scene.add(torusEight);
-    torusEight.position.y = 5;
-
-    // Turn the spinner on when you activate the torus
-    player.torusEightActivated = true;
-
-    // Update camera POV a bit to adjust to it!
-    camera.position.z = 165;
-
-    // On Torus Five and above, we'll start increasing the max camera distance
-    // camera.fov = 90;
-    // camera.updateProjectionMatrix();
-
-    torusAddEight = torus8;
-    torusEight.add(torusAddEight);
-  }
-}
-
-
-// Torus Nine
-
-const runTorusNine = () => {
-  if (player.animal >= rings[8].ringAnimalCost) {
-    // This is the standard "Create-an-Object" template
-    let mainTorusNine = new THREE.TorusGeometry(55, 2.85, 9, 100);
-    let torusNine = new THREE.Mesh(mainTorusNine, material);
-    torusNine.name = 'torusNine';
-    scene.add(torusNine);
-    torusNine.position.y = 5;
-
-    // Update camera POV a bit to adjust to it!
-    camera.position.z = 195;
-
-    // Turn the spinner on when you activate the torus
-    player.torusNineActivated = true;
-
-    // On Torus Five and above, we'll start increasing the max camera distance
-    // camera.fov = 100;
-    // camera.updateProjectionMatrix();
-
-    torusAddNine = torus9;
-    torusNine.add(torusAddNine);
-  }
-}
-
-// Torus Ten
-
-const runTorusTen = () => {
-  if (player.animal >= rings[9].ringAnimalCost) {
-    // This is the standard "Create-an-Object" template
-    let mainTorusTen = new THREE.TorusGeometry(66, 3.15, 10, 100);
-    let torusTen = new THREE.Mesh(mainTorusTen, material);
-    torusTen.name = 'torusTen';
-    scene.add(torusTen);
-    torusTen.position.y = 5;
-
-    // Turn the spinner on when you activate the torus
-    player.torusTenActivated = true;
-
-    // Update camera POV a bit to adjust to it!
-    camera.position.z = 215;
-
-    // On Torus Five and above, we'll start increasing the max camera distance
-    // camera.fov = 110;
-    // camera.updateProjectionMatrix();
-
-    torusAddTen = torus10;
-    torusTen.add(torusAddTen);
-  }
-}
 /**
  * Rotational Functions
  */
 
 const checkRotations = () => {
   torus.position.x += .01;
-}
-
-/**
- * Light Controls
- */
-const spawnLightOne = () => {
-  const lightColorSelector = document.querySelector('#selectColor').value;
-
-  if (lightColorSelector != null) {
-    mainLights.selectedColor = lightColorSelector;
-
-    const removeLight = scene.getObjectByName('dirLight');
-
-    scene.remove(removeLight);
-
-    let dirLight = new THREE.DirectionalLight(mainLights.selectedColor);
-    dirLight.position.set(-43, 5, 5);
-    dirLight.name = 'dirLight';
-    scene.add(dirLight);
-  }
-}
-
-const spawnLightTwo = () => {
-  const lightColorSelector = document.querySelector('#selectColor').value;
-
-  if (lightColorSelector != null) {
-    mainLights.selectedColorTwo = lightColorSelector;
-
-    const removeLightTwo = scene.getObjectByName('dirLightTwo');
-
-    scene.remove(removeLightTwo);
-
-    let dirLightTwo = new THREE.DirectionalLight(mainLights.selectedColorTwo);
-    dirLightTwo.position.set(43, -5, 5);
-    dirLightTwo.name = 'dirLightTwo';
-    scene.add(dirLightTwo);
-  }
-}
-
-
-const removeLights = () => {
-  const removeLight = scene.getObjectByName('dirLight');
-  // console.log(removeLight)
-  scene.remove(scene.getObjectByName('dirLight'));
-
-  const removeLightTwo = scene.getObjectByName('dirLightTwo');
-  // console.log(removeLight)
-  scene.remove(scene.getObjectByName('dirLightTwo'));
 }
 
 
@@ -521,43 +463,108 @@ $('.menuTable').hover(
  */
 
 const checkForPurchaseAvailability = () => {
-  if (player.animal >= rings[0].ringAnimalCost) {
-    const x = document.getElementById("animalInfoOne").style.color = 'white';
+  if (player.animal >= rings[0].ringCost) {
+    document.getElementById("animalInfoOne").style.color = 'white';
+    document.getElementById("checkAvailabilityOneB").style.color = 'white';
   } else {
-    const x = document.getElementById("animalInfoOne").style.color = 'red';
+    document.getElementById("animalInfoOne").style.color = 'red';
+    document.getElementById("checkAvailabilityOneB").style.color = 'red';
   }
 
-  if (player.animal >= rings[1].ringAnimalCost) {
-    const x = document.getElementById("animalInfoTwo").style.color = 'white';
+  if (player.animal >= rings[1].ringCost) {
+    document.getElementById("animalInfoTwo").style.color = 'white';
+    document.getElementById("checkAvailabilityTwoB").style.color = 'white';
   } else {
-    const x = document.getElementById("animalInfoTwo").style.color = 'red';
+    document.getElementById("animalInfoTwo").style.color = 'red';
+    document.getElementById("checkAvailabilityTwoB").style.color = 'red';
   }
 
-  if (player.animal >= rings[2].ringAnimalCost) {
-    const x = document.getElementById("animalInfoThree").style.color = 'white';
+  if (player.animal >= rings[2].ringCost) {
+    document.getElementById("animalInfoThree").style.color = 'white';
+    document.getElementById("checkAvailabilityThreeB").style.color = 'white';
   } else {
-    const x = document.getElementById("animalInfoThree").style.color = 'red';
+    document.getElementById("animalInfoThree").style.color = 'red';
+    document.getElementById("checkAvailabilityThreeB").style.color = 'red';
   }
 
-  if (player.animal >= rings[3].ringAnimalCost) {
-    const x = document.getElementById("animalInfoFour").style.color = 'white';
+  if (player.human >= rings[3].ringCost) {
+    document.getElementById("animalInfoFour").style.color = 'white';
+    document.getElementById("checkAvailabilityFourB").style.color = 'white';
   } else {
-    const x = document.getElementById("animalInfoFour").style.color = 'red';
+    document.getElementById("animalInfoFour").style.color = 'red';
+    document.getElementById("checkAvailabilityFourB").style.color = 'red';
   }
 
-  if (player.animal >= rings[4].ringAnimalCost) {
-    const x = document.getElementById("animalInfoFive").style.color = 'white';
+  if (player.human >= rings[4].ringCost) {
+    document.getElementById("animalInfoFive").style.color = 'white';
+    document.getElementById("checkAvailabilityFiveB").style.color = 'white';
   } else {
-    const x = document.getElementById("animalInfoFive").style.color = 'red';
+    document.getElementById("animalInfoFive").style.color = 'red';
+    document.getElementById("checkAvailabilityFiveB").style.color = 'red';
   }
 
-  if (player.animal >= rings[5].ringAnimalCost) {
-    const x = document.getElementById("animalInfoSix").style.color = 'white';
+  if (player.human >= rings[5].ringCost) {
+    document.getElementById("animalInfoSix").style.color = 'white';
+    document.getElementById("checkAvailabilitySixB").style.color = 'white';
   } else {
-    const x = document.getElementById("animalInfoSix").style.color = 'red';
+    document.getElementById("animalInfoSix").style.color = 'red';
+    document.getElementById("checkAvailabilitySixB").style.color = 'red';
   }
 
-  console.log('ran')
+  //For Ring Adding
+  let w;
+
+  if(player.permanentRingCountForVariableNames - 1 !== 6) {
+    w = rings[player.permanentRingCountForVariableNames - 1].ringInitialCost;
+  }
+  const x = player.currentRingCount - 1;
+  
+  //Add Ring One Check Color Change
+  if (player.isAnimalPurchaseHidden === false) {
+    if (player.animal < w && x < 3) {
+      document.querySelector('#addRing').style.color = 'white';
+      document.querySelector('#addRing').style.backgroundColor = 'red';
+
+    } else if (player.animal > w && player.currentRingCount <= 3) {
+      document.querySelector('#addRing').style.color = 'white';
+      document.querySelector('#addRing').style.backgroundColor = '#57a957';
+
+    } else {
+      document.querySelector('#addRing').classList.add("fadeOut");
+      setTimeout(
+        function(){ document.querySelector('#addRing').style.display = "none"; },
+        3000)
+      player.isAnimalPurchaseHidden = true;
+    }
+  }
+
+  if (player.isHumanPurchaseHidden === false) {
+    if (player.human < w || x < 3 || player.currentRingCount - 1 < 3){
+      document.querySelector('#addRingHuman').style.color = 'white';
+      document.querySelector('#addRingHuman').style.backgroundColor = 'red';
+    } else if (player.human > w) {
+      document.querySelector('#addRingHuman').style.color = 'white';
+      document.querySelector('#addRingHuman').style.backgroundColor = '#57a957';
+    } else {
+      document.querySelector('#addRingHuman').classList.add("fadeOut");
+      setTimeout(
+        function(){ document.querySelector('#addRingHuman').style.display = "none"; },
+        3000)
+      player.isHumanPurchaseHidden = true;
+    }
+  }
 }
 
-setInterval(checkForPurchaseAvailability, 500);
+
+setInterval(checkForPurchaseAvailability, 250);
+
+
+// Show UI or Hide UI
+
+const showOrHide = (checkbox) => {
+  if (checkbox.checked != true) {
+    document.getElementById('wrapper').style.display = 'inherit';
+  } else {
+    document.getElementById('wrapper').style.display = 'none';
+  }
+}

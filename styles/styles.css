@@ -2,6 +2,11 @@
 * Animations
 */
 
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-shadow: 1px 1px 1px green;
+}
+
 @keyframes flickerText {
   0% {
     color: black;
@@ -155,6 +160,20 @@
   }
 }
 
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
+
+/* END ANIMATIONS */
+
+
 .custom-heading-1 {
   text-align: center;
   transition: text-shadow 2s;
@@ -166,6 +185,10 @@
     -4px 8px 1px lightblue,
     -5px 10px 1px palevioletred;
   animation: colorChange 3s linear;
+}
+
+.fadeOut {
+  animation: fadeOut 3s linear;
 }
 
 /*
@@ -229,16 +252,16 @@
   width: 798px;
   height: 154px;
   position: absolute;
-  top: 445px;
+  top: 394px;
   left: -1px;
   /* pointer-events: none; */
 }
 
 #menuSystemOne {
   /* border-top: 2px solid rgb(47, 20, 202); */
-  border-bottom: 2px solid rgb(47, 20, 202);
-  border-left: 2px solid rgb(47, 20, 202);
-  border-right: 2px solid rgb(47, 20, 202);
+  border-bottom: 2px solid red;
+  border-left: 2px solid red;
+  border-right: 2px solid red;
   transition: 1s;
   /* background-image: url('../images/space-ui-background-blue.png'); */
 }
@@ -258,18 +281,18 @@
 
 #menuSystemThree {
   /* border-top: 2px solid green; */
-  border-bottom: 2px solid green;
-  border-left: 2px solid green;
-  border-right: 2px solid green;
+  border-bottom: 2px solid red;
+  border-left: 2px solid red;
+  border-right: 2px solid red;
   display: none;
   /* background-image: url('../images/space-ui-background-green.png'); */
 }
 
 #menuSystemFour {
   /* border-top: 2px solid purple; */
-  border-bottom: 2px solid purple;
-  border-left: 2px solid purple;
-  border-right: 2px solid purple;
+  border-bottom: 2px solid red;
+  border-left: 2px solid red;
+  border-right: 2px solid red;
   display: none;
   /* background-image: url('../images/seamless-abstract-nebula.jpg'); */
 }
@@ -288,12 +311,12 @@ p {
 
 #wrapper {
   width: 800px;
-  height: 600px;
+  height: 603px;
   border: 1px solid red;
   text-align: center;
   float: left;
   margin: 0 auto;
-  z-index: 5;
+  /* z-index: 5; */
   position: absolute;
   top: 0;
   left: 0;
@@ -319,6 +342,11 @@ p {
 * General Positioning
 */
 
+#battleArea {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
 #buttonAddTorus {
   position: absolute;
   top: 550px;
@@ -349,7 +377,7 @@ p {
 
 #mainSectionLeft {
   position: absolute;
-  top: 101px;
+  top: -20px;
   left: 0px;
   width: 150px;
   height: 398px;
@@ -373,7 +401,6 @@ p {
 
 #mainSectionBottom {
   position: absolute;
-  top: 2px;
   left: 0px;
   width: 799px;
   height: 100px;
@@ -414,11 +441,6 @@ p {
   /* animation: showTextSlowly 6s linear; */
 }
 
-#mainAnimalInfo, #mainAnimalInfoTwo{
-  color: white;
-  text-shadow: 1px 1px 1px rgba(190, 3, 3, 0.829);
-  text-decoration: underline;
-}
 /** 
 *
 * Ring Sections
@@ -438,15 +460,15 @@ p {
 }
 
 #ringSections td {
+  background-color: rgba(0, 0, 0, 0.6);
   width: 33%;
   height: 145px;
-  color: rgba(255, 255, 255, 0.5);
 }
 
 #ringSectionsTwo td {
+  background-color: rgba(0, 0, 0, 0.6);
   width: 33%;
   height: 145px;
-  color: rgba(255, 255, 255, 0.5);
 }
 
 
@@ -459,18 +481,15 @@ p {
 .ringSectionEight,
 .ringSectionNine,
 .ringSectionTen {
-  border-left: 1px solid aliceblue;
-  border-right: 1px solid aliceblue;
+  border: 2px solid aliceblue;
   vertical-align: top;
   margin-top: -20px;
   padding-bottom: 24px;
-  color: rgba(255, 255, 255, 0.5);
 }
 
 .ringSectionOne {
   vertical-align: top;
-  border-left: 1px solid aliceblue;
-  border-right: 1px solid aliceblue;
+  border: 2px solid aliceblue;
   margin-top: -20px;
   padding-bottom: 24px;
 }
@@ -479,7 +498,214 @@ p {
   display: none;
 }
 
-#animalInfoOne, #animalInfoTwo, #animalInfoThree,
-#animalInfoFour, #animalInfoFive {
+#animalInfoOne,
+#animalInfoTwo,
+#animalInfoThree,
+#animalInfoFour,
+#animalInfoFive,
+#animalInfoSix {
   /* color: white; */
+}
+
+#ringSectionOneLevel,
+#ringSectionTwoLevel,
+#ringSectionThreeLevel,
+#ringSectionFourLevel,
+#ringSectionFiveLevel,
+#ringSectionSixLevel {
+  border: 1px solid white;
+  width: 80px;
+  height: 40px;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+
+#ringSectionOneLevel {}
+
+#ringSectionTwoLevel {}
+
+#ringSectionThreeLevel {}
+
+#ringSectionFourLevel {}
+
+#ringSectionFiveLevel {}
+
+#ringSectionSixLevel {}
+
+#ringSectionOneTitle,
+#ringSectionTwoTitle,
+#ringSectionThreeTitle,
+#ringSectionFourTitle,
+#ringSectionFiveTitle,
+#ringSectionSixTitle {
+  border: 1px solid white;
+  width: 187px;
+  height: 40px;
+  position: absolute;
+  text-align: center;
+  padding-right: 5px;
+}
+
+#ringSectionOneTitle,
+#ringSectionFourTitle {
+  top: -15px;
+  left: 85px;
+}
+
+#ringSectionTwoTitle,
+#ringSectionFiveTitle {
+  top: -15px;
+  left: 350px;
+}
+
+#ringSectionThreeTitle,
+#ringSectionSixTitle {
+  top: -15px;
+  left: 615px;
+}
+
+#ringSectionFourTitle {}
+
+#ringSectionSixTitle {}
+
+
+#ringSectionOneReady,
+#ringSectionTwoReady,
+#ringSectionThreeReady,
+#ringSectionFourReady,
+#ringSectionFiveReady,
+#ringSectionSixReady {
+  border: 1px solid white;
+  width: 80px;
+  height: 40px;
+  position: absolute;
+}
+
+#ringSectionOneReady,
+#ringSectionFourReady {
+  top: -15px;
+  left: 182px;
+}
+
+#ringSectionTwoReady,
+#ringSectionFiveReady {
+  top: -15px;
+  left: 447px;
+}
+
+#ringSectionThreeReady,
+#ringSectionSixReady {
+  top: -15px;
+  left: 712px;
+}
+
+/**
+* Animal/Human Section
+**/
+#mainAnimalInfo {
+  color: white;
+  text-shadow: 1px 1px 1px rgba(255, 6, 6, 0.829);
+  text-decoration: underline;
+  width: 250px;
+  height: 50px;
+  position: absolute;
+  top: 0px;
+  left: 25px;
+  border: 1px solid white;
+  border-right: none;
+}
+
+#mainAnimalInfoTwo {
+  color: white;
+  text-shadow: 1px 1px 1px rgba(6, 155, 255, 0.829);
+  text-decoration: underline;
+  width: 250px;
+  height: 50px;
+  position: absolute;
+  top: 0px;
+  left: 525px;
+  border: 1px solid white;
+  border-left: none;
+}
+
+#showOrHide {
+  z-index: 25;
+  width: 100px;
+  max-width: 100px;
+  position: absolute;
+  top: 65px;
+  left: 0px;
+  font-size: 22px;
+  color: darkturquoise;
+}
+
+
+/*
+* Background Images
+*/
+
+.ringSectionOne {
+  background-image: url('../textures/rat1.png');
+  background-size: cover;
+}
+
+.ringSectionTwo {
+  background-image: url('../textures/deer1.png');
+  background-size: cover;
+}
+
+
+.ringSectionThree {
+  background-image: url('../textures/trex1.png');
+  background-position-x: -109px;
+  background-position-y: 200px;
+}
+
+.ringSectionFour {
+  background-image: url('../textures/trog1.png');
+  background-size: cover;
+  background-position-x: -63px;
+  background-position-y: 200px;
+}
+
+.ringSectionFive {
+  background-image: url('../textures/peasant1.png');
+  background-size: cover;
+  background-position-x: -15px;
+  background-position-y: 171px;
+}
+
+.ringSectionSix{
+  background-image: url('../textures/alien1.png');
+  background-size: cover;
+}
+
+/*
+* Adding Rings Section (UI)
+*/
+
+#addRing {
+  display: inherit;
+  width: 80px;
+  height: 80px;
+  border-left: 1px solid white;
+  padding: 3px 10px;
+  text-transform: uppercase;
+  background-color: #57a957;
+  border-color: #57a957;
+  float: right;
+  font-size: 14px;
+}
+
+#addRingHuman {
+  width: 80px;
+  height: 80px;
+  border-left: 1px solid white;
+  padding: 3px 10px;
+  text-transform: uppercase;
+  background-color: #57a957;
+  border-color: #57a957;
+  float: right;
+  font-size: 14px;
+  margin-top: 5px;
 }

@@ -5,20 +5,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Idle Rings</title>
+  <title>Idle Snackrifice</title>
   <link type="text/css" href="styles/styles.css" rel="stylesheet">
 </head>
 
 <body>
+    <canvas id="battleArea"></canvas> 
+
+    <div id="showOrHide">
+
+        <input name="showOrHideAll" onclick="showOrHide(showOrHideAll)" type="checkbox" value="show" id="showOrHideAll">Hide UI?<br>
+    </div>
 
   <!-- Main Battle Area -->
   <div id="wrapper">
-    <canvas id="battleArea"></canvas>
 
     <!-- UI Sections -->
     <div id="header">
       <h1 class="largeText" id="gameTitle">Idle SNACKRIFICE!
-        <span class="smallText" id="version">V 0.01A</span>
+        <p class="smallText" id="version">V 0.01a</p>
       </h1>
 
     </div>
@@ -26,10 +31,13 @@
     <div id="mainSectionLeft">
       <p id="mainAnimalInfo"></p>
       <p id="mainAnimalInfoTwo"></p>
+
+      <p></p>
     </div>
 
     <div id="mainSectionRight">
-
+      <div class="large" id="addRing" onclick="addNewRingToArray()">Sacrifice Rat Engine <p></p> (A: 1)</div>
+      <div class="large" id="addRingHuman" onclick="addNewHumanRingToArray()">Sacrifice Troglodyte Engine <p></p> (H: 1)</div>
 
     </div>
 
@@ -55,19 +63,32 @@
       <div id="mainSectionBottom">
         <table id="ringSections">
           <tr>
-            <td class="ringSection ringSectionOne showTextSlowly">
+            <td class="ringSection ringSectionOne">
+
+              <div id="ringSectionOneLevel"></div>
+              <div id="ringSectionOneTitle"></div>
+              <!-- <div id="ringSectionOneReady"></div> -->
+
               <p class="showTextSlowly" id="animalInfoOne" class="hide"></p>
-              <div id="checkAvailabilityOneA" onclick="addNewRingToArray()">Add</div>
               <div id="checkAvailabilityOneB" onclick="upgradeRingSpeedOne()">Upgrade</div>
             </td>
-            <td class="ringSection ringSectionTwo showTextSlowly">
+            <td class="ringSection ringSectionTwo">
+
+              <div id="ringSectionTwoLevel"></div>
+              <div id="ringSectionTwoTitle"></div>
+              <!-- <div id="ringSectionTwoReady"></div> -->
+
+
               <p class="showTextSlowly" id="animalInfoTwo" class="hide"></p>
-              <div id="checkAvailabilityTwoA" onclick="addNewRingToArray()">Add</div>
               <div id="checkAvailabilityTwoB" onclick="upgradeRingSpeedTwo()">Upgrade</div>
             </td>
-            <td class="ringSection ringSectionThree showTextSlowly">
+            <td class="ringSection ringSectionThree">
+
+              <div id="ringSectionThreeLevel"></div>
+              <div id="ringSectionThreeTitle"></div>
+              <!-- <div id="ringSectionThreeReady"></div> -->
+
               <p class="showTextSlowly hide" id="animalInfoThree"></p>
-              <div id="checkAvailabilityThreeA" onclick="addNewRingToArray()">Add</div>
               <div id="checkAvailabilityThreeB" onclick="upgradeRingSpeedThree()">Upgrade</div>
             </td>
           </tr>
@@ -77,28 +98,40 @@
 
     <!-- Human Snackrifices -->
     <div id="menuSystemTwo">
-        <table id="ringSectionsTwo">
-            <tr>
-              <td class="ringSection ringSectionFour showTextSlowly">
-                <p class="showTextSlowly hide checkAvailabilityFourA" id="animalInfoFour"></p>
-                <div id="checkAvailabilityFourA" onclick="addNewRingToArray()">Add</div>
-                <div id="checkAvailabilityFourB" onclick="upgradeRingSpeedFour()">Upgrade</div>
-  
-              </td>
-              <td class="ringSection ringSectionFive showTextSlowly">
-                <p class="showTextSlowly hide" id="animalInfoFive"></p>
-                <div id="checkAvailabilityFiveA" onclick="addNewRingToArray()">Add</div>
-                <div id="checkAvailabilityFiveB" onclick="upgradeRingSpeedFive()">Upgrade</div>
-  
-              </td>
-              <td class="ringSection ringSectionSix showTextSlowly">
-                <p class="showTextSlowly hide" id="animalInfoSix"></p>
-                <div id="checkAvailabilitySixA" onclick="addNewRingToArray()">Add</div>
-                <div id="checkAvailabilitySixB" onclick="upgradeRingSpeedSix()">Upgrade</div>
-  
-              </td>
-            </tr>
-          </table>
+      <table id="ringSectionsTwo">
+        <tr>
+          <td class="ringSection ringSectionFour showTextSlowly">
+
+            <div id="ringSectionFourLevel"></div>
+            <div id="ringSectionFourTitle"></div>
+            <!-- <div id="ringSectionFourReady"></div> -->
+
+            <p class="showTextSlowly hide checkAvailabilityFourA" id="animalInfoFour"></p>
+            <div id="checkAvailabilityFourB" onclick="upgradeRingSpeedFour()">Upgrade</div>
+
+          </td>
+          <td class="ringSection ringSectionFive showTextSlowly">
+
+            <div id="ringSectionFiveLevel"></div>
+            <div id="ringSectionFiveTitle"></div>
+            <!-- <div id="ringSectionFiveReady"></div> -->
+
+            <p class="showTextSlowly hide" id="animalInfoFive"></p>
+            <div id="checkAvailabilityFiveB" onclick="upgradeRingSpeedFive()">Upgrade</div>
+
+          </td>
+          <td class="ringSection ringSectionSix showTextSlowly">
+
+            <div id="ringSectionSixLevel"></div>
+            <div id="ringSectionSixTitle"></div>
+            <!-- <div id="ringSectionSixReady"></div> -->
+
+            <p class="showTextSlowly hide" id="animalInfoSix"></p>
+            <div id="checkAvailabilitySixB" onclick="upgradeRingSpeedSix()">Upgrade</div>
+
+          </td>
+        </tr>
+      </table>
 
 
     </div>

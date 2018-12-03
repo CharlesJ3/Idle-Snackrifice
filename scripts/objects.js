@@ -7,6 +7,15 @@
 const player = {
   // Ring Speed Checks 
   torusOneActivated: false,
+  torusTwoActivated: false,
+  torusThreeActivated: false,
+  torusFourActivated: false,
+  torusFiveActivated: false,
+  torusSixActivated: false,
+  resourceOne: 'animal',
+  resourceTwo: 'human',
+  isAnimalPurchaseHidden: false,
+  isHumanPurchaseHidden: false,
 
   // Player Statistics  (essential)
 
@@ -15,8 +24,8 @@ const player = {
   id: '',
 
   //Reanimals
-  animal: 1,
-  human: 1,
+  animal: 5,
+  human: 5,
 
   //Rings
   currentRingCount: 1,
@@ -28,20 +37,24 @@ const player = {
 
 const rings = [{
   ringNumber: 1,
-  ringAnimalCost: 1,
+  ringInitialCost: 1,
+  ringCost: 1,
+  ringSacrifice: 'Rat',
   ringColorOne: '',
   ringColorTwo: '',
   ringColorThree: '',
   ringLevel: 0,
   rotationalSpeedX: Math.PI / 1080,
-  rotationalSpeedY: Math.PI / 1080,
+  rotationalSpeedY: 0,
   addAnimal() {
     player.animal += (this.rotationalSpeedX) + (this.rotationalSpeedY)
   },
 
 }, {
   ringNumber: 2,
-  ringAnimalCost: 10,
+  ringInitialCost: 2,
+  ringCost: 2,
+  ringSacrifice: 'Deer',
   ringColorOne: '',
   ringColorTwo: '',
   ringColorThree: '',
@@ -54,7 +67,9 @@ const rings = [{
 
 }, {
   ringNumber: 3,
-  ringAnimalCost: 25,
+  ringInitialCost: 3,
+  ringCost: 3,
+  ringSacrifice: 'T-Rex',
   ringColorOne: '',
   ringColorTwo: '',
   ringColorThree: '',
@@ -62,101 +77,53 @@ const rings = [{
   rotationalSpeedX: Math.PI / 1080,
   rotationalSpeedY: 0,
   addAnimal() {
-    player.animal += (this.rotationalSpeedX) + (this.rotationalSpeedY)
+    player.human += (this.rotationalSpeedX) + (this.rotationalSpeedY)
   },
 
 }, {
   ringNumber: 4,
-  ringAnimalCost: 100,
+  ringInitialCost: 1,
+  ringSacrifice: 'Troglodyte',
+  ringCost: 1,
   ringColorOne: '',
   ringColorTwo: '',
   ringColorThree: '',
   ringLevel: 0,
-  rotationalSpeedX: Math.PI / 1080,
-  rotationalSpeedY: 0,
+  rotationalSpeedX: 0,
+  rotationalSpeedY: Math.PI / 1080,
   addAnimal() {
-    player.animal += (this.rotationalSpeedX) + (this.rotationalSpeedY)
+    player.human += (this.rotationalSpeedX) + (this.rotationalSpeedY)
   },
 
 }, {
   ringNumber: 5,
-  ringAnimalCost: 250,
+  ringInitialCost: 2,
+  ringCost: 2,
+  ringSacrifice: 'Peasant',
   ringColorOne: '',
   ringColorTwo: '',
   ringColorThree: '',
   ringLevel: 0,
-  rotationalSpeedX: Math.PI / 1080,
-  rotationalSpeedY: 0,
+  rotationalSpeedX: 0,
+  rotationalSpeedY: Math.PI / 1080,
   addAnimal() {
-    player.animal += (this.rotationalSpeedX) + (this.rotationalSpeedY)
+    player.human += (this.rotationalSpeedX) + (this.rotationalSpeedY)
   },
 
 }, {
   ringNumber: 6,
-  ringAnimalCost: 1000,
+  ringInitialCost: 3,
+  ringCost: 3,
+  ringSacrifice: 'Alien',
   ringColorOne: '',
   ringColorTwo: '',
   ringColorThree: '',
   ringLevel: 0,
-  rotationalSpeedX: Math.PI / 1080,
-  rotationalSpeedY: 0,
+  rotationalSpeedX: 0,
+  rotationalSpeedY: Math.PI / 1080,
   addAnimal() {
     player.animal += (this.rotationalSpeedX) + (this.rotationalSpeedY)
   },
-
-}, {
-  ringNumber: 7,
-  ringAnimalCost: 5000,
-  ringColorOne: '',
-  ringColorTwo: '',
-  ringColorThree: '',
-  ringLevel: 0,
-  rotationalSpeedX: Math.PI / 1080,
-  rotationalSpeedY: 0,
-  addAnimal() {
-    player.animal += (this.rotationalSpeedX) + (this.rotationalSpeedY)
-  },
-
-}, {
-  ringNumber: 8,
-  ringAnimalCost: 25000,
-  ringColorOne: '',
-  ringColorTwo: '',
-  ringColorThree: '',
-  ringLevel: 0,
-  rotationalSpeedX: Math.PI / 1080,
-  rotationalSpeedY: 0,
-  addAnimal() {
-    player.animal += (this.rotationalSpeedX) + (this.rotationalSpeedY)
-  },
-
-}, {
-  ringNumber: 9,
-  ringAnimalCost: 100000,
-  ringColorOne: '',
-  ringColorTwo: '',
-  ringColorThree: '',
-  ringLevel: 0,
-  rotationalSpeedX: Math.PI / 1080,
-  rotationalSpeedY: 0,
-  addAnimal() {
-    player.animal += (this.rotationalSpeedX) + (this.rotationalSpeedY)
-  },
-
-
-}, {
-  ringNumber: 10,
-  ringAnimalCost: 100000,
-  ringColorOne: '',
-  ringColorTwo: '',
-  ringColorThree: '',
-  ringLevel: 0,
-  rotationalSpeedX: Math.PI / 1080,
-  rotationalSpeedY: 0,
-  addAnimal() {
-    player.animal += (this.rotationalSpeedX) + (this.rotationalSpeedY)
-  },
-
 }]
 
 const enemy = {

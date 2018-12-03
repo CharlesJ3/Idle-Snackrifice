@@ -5,7 +5,7 @@ const renderer = new THREE.WebGLRenderer({
   alpha: true,
 });
 
-renderer.setSize(800, 600);
+renderer.setSize(800, 605);
 // renderer.setClearColor('#fff', 0.1); // the default
 
 // Configure renderer clear color
@@ -20,12 +20,11 @@ const camera = new THREE.PerspectiveCamera(
 );
 camera.position.z = updateCam.cameraZPos;
 
-
 // Build the controls.
 var controls = new THREE.OrbitControls(camera);
 controls.autoRotate = true;
-controls.autoRotateSpeed = .025;
-controls.maxDistance = 800;
+controls.autoRotateSpeed = 0
+controls.maxDistance = 900;
 controls.minDistance = 10;
 
 // Help with left mouse speed
@@ -47,112 +46,166 @@ const scene = new THREE.Scene();
 
 //Lights
 
-//**IN PROGRESS **/
-// let dirLight = new THREE.DirectionalLight(mainLights.selectedColor);
-// dirLight.position.set(43, -5, 5);
-// dirLight.name = 'dirLight';
-// scene.add(dirLight);
+let dirLight = new THREE.DirectionalLight( 0xffffff, .5);
+dirLight.intensity = 1;
+dirLight.position.set(435, -5, 125);
+dirLight.name = 'dirLight';
+scene.add(dirLight);
 
-const addDirLight = () => {
-  let dirLightTwo = new THREE.DirectionalLight(mainLights.selectedColorTwo);
-  dirLightTwo.position.set(-43, 5, 5);
-  dirLightTwo.name = 'dirLightTwo';
-  scene.add(dirLightTwo);
-}
+let dirLight2 = new THREE.DirectionalLight( 0xffffff, .5);
+// dirLight.intensity = 1;
+dirLight2.position.set(-435, -5, 125);
+dirLight2.name = 'dirLightTwo';
+scene.add(dirLight2);
 
-addDirLight();
+var light = new THREE.SpotLight( 0xffffff, 15, 25, 1.00, 0, 1);
+light.position.x = 15;
+light.position.y = -1;
+light.position.z = 1;
+scene.add( light );
 
-const addSpotLight = () => {
-  let spotLight = new THREE.SpotLight('#022080');
-  spotLight.position.set(43, -5, 133);
-  scene.add(spotLight);
-}
 
-addSpotLight();
+var light2 = new THREE.SpotLight( 0xffffff, 15, 25, 1.00, 0, 1);
+light2.position.x = -15;
+light2.position.y = -1;
+light2.position.z = -1;
+scene.add( light2 );
 
-// let light = new THREE.PointLight( '#002080', 1, 100 );
-// light.position.set( 5, 5, 50 );
-// scene.add( light );
+// var light2 = new THREE.SpotLight( 0xff0000, 2, 10);
+// scene.add( light2 );
 
-// let lightTwo = new THREE.PointLight( '#0000cc', 1, 100 );
-// lightTwo.position.set( -5, -5, 50 );
-// scene.add( lightTwo );
+// var light3 = new THREE.SpotLight( 0x00ff00, 2, 17);
+// scene.add( light3 );
+
+// var light4 = new THREE.SpotLight( 0x0000ff, 2, 25);
+// scene.add( light4 );
 
 //OBJECTS (Game Objects, not OOP/Programming Objects, although they are not exactly mutually exclusive)
 let mainSphere = new THREE.SphereGeometry(3, 64, 64);
 
 let sphere = new THREE.Mesh(mainSphere, material);
 scene.add(sphere);
-sphere.position.y = 5;
+sphere.position.y = 3;
 
 
 // Update Text Inside Game
 const updateText = () => {
   document.querySelector('#mainAnimalInfo').innerHTML = `
-  Animal Bits 
-  <br> 
+  Animal<br>
     ${(player.animal).toFixed(1)} 
   `
 
   document.querySelector('#mainAnimalInfoTwo').innerHTML = `
-  Human Chunks
-  <br> 
+  Human<br>
     ${(player.human).toFixed(1)} 
   `
 
   //Animal One
   document.querySelector('#animalInfoOne').innerHTML = `
-  Cost
-    <br> 
-      ${(rings[0].ringAnimalCost).toFixed(1)}
+  Speed Upgrade:
+      ${(rings[0].ringCost).toFixed(1)}
   `
   //Animal Two
   document.querySelector('#animalInfoTwo').innerHTML = `
-  Cost
-    <br> 
-      ${(rings[1].ringAnimalCost).toFixed(1)}
+  Speed Upgrade:
+      ${(rings[1].ringCost).toFixed(1)}
   `
 
   //Animal Three
   document.querySelector('#animalInfoThree').innerHTML = `
-  Cost
-    <br> 
-      ${(rings[2].ringAnimalCost).toFixed(1)}
+  Speed Upgrade:
+      ${(rings[2].ringCost).toFixed(1)}
   `
 
   //Human One
   document.querySelector('#animalInfoFour').innerHTML = `
-  Cost
-    <br> 
-      ${(rings[3].ringAnimalCost).toFixed(1)}
+  Speed Upgrade:
+      ${(rings[3].ringCost).toFixed(1)}
   `
 
   //Animal Two
   document.querySelector('#animalInfoFive').innerHTML = `
-  Cost
-    <br> 
-      ${(rings[4].ringAnimalCost).toFixed(1)}
+  Speed Upgrade:
+      ${(rings[4].ringCost).toFixed(1)}
   `
 
   //Human Three
   document.querySelector('#animalInfoSix').innerHTML = `
-  Cost
-    <br> 
-      ${(rings[5].ringAnimalCost).toFixed(1)}
+  Speed Upgrade:
+      ${(rings[5].ringCost).toFixed(1)}
   `
-  // document.querySelector('#ringOne').innerHTML = `Ring One Cost: <br> ${(rings[0].ringAnimalCost).toFixed(1)}`
+
+  // Show Levels inside of Level Section
+  document.querySelector('#ringSectionOneLevel').innerHTML = `
+  Lvl: <br>
+    ${rings[0].ringLevel.toFixed(0)}
+  `
+
+  document.querySelector('#ringSectionTwoLevel').innerHTML = `
+  Lvl: <br>
+    ${rings[1].ringLevel.toFixed(0)}
+  `
+
+  document.querySelector('#ringSectionThreeLevel').innerHTML = `
+  Lvl: <br>
+    ${rings[2].ringLevel.toFixed(0)}
+  `
+
+  document.querySelector('#ringSectionFourLevel').innerHTML = `
+  Lvl: <br>
+    ${rings[3].ringLevel.toFixed(0)}
+  `
+
+  document.querySelector('#ringSectionFiveLevel').innerHTML = `
+  Lvl: <br>
+    ${rings[4].ringLevel.toFixed(0)}
+  `
+
+  document.querySelector('#ringSectionSixLevel').innerHTML = `
+  Lvl: <br>
+    ${rings[5].ringLevel.toFixed(0)}
+  `
+
+  // Show Titles inside of Title Sections
+  document.querySelector('#ringSectionOneTitle').innerHTML = `
+  Sacrifice <br>
+  ${rings[0].ringSacrifice}
+  `
+
+  document.querySelector('#ringSectionTwoTitle').innerHTML = `
+  Sacrifice <br>
+    ${rings[1].ringSacrifice}
+  `
+
+  document.querySelector('#ringSectionThreeTitle').innerHTML = `
+  Sacrifice <br>
+    ${rings[2].ringSacrifice}
+  `
+
+  document.querySelector('#ringSectionFourTitle').innerHTML = `
+  Sacrifice <br>
+    ${rings[3].ringSacrifice}
+  `
+
+  document.querySelector('#ringSectionFiveTitle').innerHTML = `
+  Sacrifice <br>
+    ${rings[4].ringSacrifice}
+  `
+
+  document.querySelector('#ringSectionSixTitle').innerHTML = `
+  Sacrifice <br>
+    ${rings[5].ringSacrifice}
+  `
+
+  // document.querySelector('#ringOne').innerHTML = `Ring One Cost: <br> ${(rings[0].ringCost).toFixed(1)}`
 }
 
-// RENDER LOOP 1
-requestAnimationFrame(render);
-
-function render() {
+const checkTorusRotations = () => {
 
   if (player.torusOneActivated) {
     let xa = scene.getObjectByName('torus');
     xa.rotation.x += rings[0].rotationalSpeedX;
     xa.rotation.y += rings[0].rotationalSpeedY;
-
     rings[0].addAnimal();
   }
 
@@ -196,40 +249,28 @@ function render() {
     rings[5].addAnimal();
   }
 
-  if (player.torusSevenActivated) {
-    let xg = scene.getObjectByName('torusSeven');
-    xg.rotation.x += rings[6].rotationalSpeedX;
-    xg.rotation.y += rings[6].rotationalSpeedY;
+}
 
-    rings[6].addAnimal();
-  }
+const rotateLights = () => {
+  // if (spotlight.position.y >= 250 && spotlight.position.y >= 0 ){
+  //   spotlight.position.z += 5;
+  // }
 
-  if (player.torusEightActivated) {
-    let xh = scene.getObjectByName('torusEight');
-    xh.rotation.x += rings[7].rotationalSpeedX;
-    xh.rotation.y += rings[7].rotationalSpeedY;
+  // if (spotlight.position.y <= 250 && spotlight.position.y >= 0){
+  //   spotlight.position.z -= 5;
+  // }
+}
 
-    rings[7].addAnimal();
-  }
+// RENDER LOOP 1
+requestAnimationFrame(render);
 
-  if (player.torusNineActivated) {
-    let xi = scene.getObjectByName('torusNine');
-    xi.rotation.x += rings[8].rotationalSpeedX;
-    xi.rotation.y += rings[8].rotationalSpeedY;
-
-    rings[8].addAnimal();
-  }
-
-  if (player.torusTenActivated) {
-    let xj = scene.getObjectByName('torusTen');
-    xj.rotation.x += rings[9].rotationalSpeedX;
-    xj.rotation.y += rings[9].rotationalSpeedY;
-
-    rings[9].addAnimal();
-  }
+function render() {
 
   controls.update();
+  // checkForPurchaseAvailability();
+  updateText();
+  rotateLights();
+  checkTorusRotations();
   renderer.render(scene, camera);
   requestAnimationFrame(render);
-  updateText();
 }
