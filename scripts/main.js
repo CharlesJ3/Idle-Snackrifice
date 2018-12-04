@@ -110,7 +110,7 @@ const updateText = () => {
     Cost&nbsp
   </span>
     <br>
-  <span class="positionInsideSpeedLeft"> ${(rings[0].ringSpeedUpgrade() * 100).toFixed(3)} </span>
+  <span class="positionInsideSpeedLeft"> ${(rings[0].ringSpeedUpgrade() * 100).toFixed(2)} </span>
   <span class="positionInsideSpeedRight"> ${(rings[0].ringCost).toFixed(0)} </span>
   `
   //Animal Two
@@ -120,7 +120,7 @@ const updateText = () => {
     Cost&nbsp
   </span>
     <br>
-  <span class="positionInsideSpeedLeft"> ${(rings[1].ringSpeedUpgrade() * 100).toFixed(3)} </span>
+  <span class="positionInsideSpeedLeft"> ${(rings[1].ringSpeedUpgrade() * 100).toFixed(2)} </span>
   <span class="positionInsideSpeedRight"> ${(rings[1].ringCost).toFixed(0)} </span>
   `
   //Animal Three
@@ -130,7 +130,7 @@ const updateText = () => {
     Cost&nbsp
   </span>
     <br>
-  <span class="positionInsideSpeedLeft"> ${(rings[2].ringSpeedUpgrade() * 100).toFixed(3)} </span>
+  <span class="positionInsideSpeedLeft"> ${(rings[2].ringSpeedUpgrade() * 100).toFixed(2)} </span>
   <span class="positionInsideSpeedRight"> ${(rings[2].ringCost).toFixed(0)} </span>
   `
 
@@ -141,7 +141,7 @@ const updateText = () => {
     Cost&nbsp
   </span>
     <br>
-  <span class="positionInsideSpeedLeft"> ${(rings[3].ringSpeedUpgrade() * 100).toFixed(3)} </span>
+  <span class="positionInsideSpeedLeft"> ${(rings[3].ringSpeedUpgrade() * 100).toFixed(2)} </span>
   <span class="positionInsideSpeedRight"> ${(rings[3].ringCost).toFixed(0)} </span>
   `
 
@@ -152,7 +152,7 @@ const updateText = () => {
     Cost&nbsp
   </span>
     <br>
-  <span class="positionInsideSpeedLeft"> ${(rings[4].ringSpeedUpgrade() * 100).toFixed(3)} </span>
+  <span class="positionInsideSpeedLeft"> ${(rings[4].ringSpeedUpgrade() * 100).toFixed(2)} </span>
   <span class="positionInsideSpeedRight"> ${(rings[4].ringCost).toFixed(0)} </span>
   `
 
@@ -163,7 +163,7 @@ const updateText = () => {
     Cost&nbsp
   </span>
     <br>
-  <span class="positionInsideSpeedLeft"> ${(rings[5].ringSpeedUpgrade() * 100).toFixed(3)} </span>
+  <span class="positionInsideSpeedLeft"> ${(rings[5].ringSpeedUpgrade() * 100).toFixed(2)} </span>
   <span class="positionInsideSpeedRight"> ${(rings[5].ringCost).toFixed(0)} </span>
   `
 

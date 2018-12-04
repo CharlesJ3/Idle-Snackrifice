@@ -60,7 +60,7 @@ const rings = [{
     return this.rotationalSpeedX + this.rotationalSpeedY
   }, 
   addAnimal() {
-    player.animal += ((this.rotationalSpeedX) + (this.rotationalSpeedY) * this.ringPower)
+    player.animal += ((this.rotationalSpeedX) + (this.rotationalSpeedY)) * (this.ringPower * 1.75)
   },
 
 }, {
@@ -68,13 +68,13 @@ const rings = [{
   ringPurchaseCost: 25,
   ringInitialCost: 100,
   ringInitialPowerCost: 250,
-  ringCost: 2,
-  ringPowerCost: 2,
+  ringCost: 25,
+  ringPowerCost: 25,
   ringSacrifice: 'Deer',
   ringColorOne: '',
   ringColorTwo: '',
   ringColorThree: '',
-  ringPower: 1.00,
+  ringPower: 2.00,
   ringLevel: 0,
   ringPowerLevel: 0,
   rotationalSpeedX: 0,
@@ -83,7 +83,7 @@ const rings = [{
     return this.rotationalSpeedX + this.rotationalSpeedY
   }, 
   addAnimal() {
-    player.animal +=   ((this.rotationalSpeedX) + (this.rotationalSpeedY)) * this.ringPower
+    player.animal += ((this.rotationalSpeedX) + (this.rotationalSpeedY)) * (this.ringPower * 2.25)
   },
 
 }, {
@@ -91,13 +91,13 @@ const rings = [{
   ringPurchaseCost: 250,
   ringInitialCost: 1000,
   ringInitialPowerCost: 2500,
-  ringCost: 3,
-  ringPowerCost: 3,
+  ringCost: 250,
+  ringPowerCost: 250,
   ringSacrifice: 'T-Rex',
   ringColorOne: '',
   ringColorTwo: '',
   ringColorThree: '',
-  ringPower: 1.00,
+  ringPower: 3.00,
   ringLevel: 0,
   ringPowerLevel: 0,
   rotationalSpeedX: 0,
@@ -106,7 +106,7 @@ const rings = [{
     return this.rotationalSpeedX + this.rotationalSpeedY
   }, 
   addAnimal() {
-    player.human +=   ((this.rotationalSpeedX) + (this.rotationalSpeedY) * this.ringPower)
+    player.animal += ((this.rotationalSpeedX) + (this.rotationalSpeedY)) * (this.ringPower * 3)
   },
 
 }, {
@@ -114,9 +114,9 @@ const rings = [{
   ringPurchaseCost: 1,
   ringInitialCost: 1,
   ringInitialPowerCost: 1,
+  ringCost: 3,
+  ringPowerCost: 5,
   ringSacrifice: 'Troglodyte',
-  ringCost: 1,
-  ringPowerCost: 1,
   ringColorOne: '',
   ringColorTwo: '',
   ringColorThree: '',
@@ -129,7 +129,7 @@ const rings = [{
     return this.rotationalSpeedX + this.rotationalSpeedY
   }, 
   addAnimal() {
-    player.human +=   ((this.rotationalSpeedX) + (this.rotationalSpeedY) * this.ringPower)
+    player.human += ((this.rotationalSpeedX) + (this.rotationalSpeedY)) * (this.ringPower * 1.75)
   },
 
 }, {
@@ -145,28 +145,28 @@ const rings = [{
   ringColorThree: '',
   ringLevel: 0,
   ringPowerLevel: 0,
-  ringPower: 1.00,
+  ringPower: 2.00,
   rotationalSpeedX: 0,
   rotationalSpeedY: Math.PI / 1080,
   ringSpeedUpgrade() {
     return this.rotationalSpeedX + this.rotationalSpeedY
   }, 
   addAnimal() {
-    player.human +=   ((this.rotationalSpeedX) + (this.rotationalSpeedY) * this.ringPower)
+    player.human += ((this.rotationalSpeedX) + (this.rotationalSpeedY)) * (this.ringPower * 2.25)
   },
 
 }, {
   ringNumber: 6,
   ringPurchaseCost: 250,
-  ringInitialCost: 3,
-  ringInitialPowerCost: 3,
-  ringCost: 3,
-  ringPowerCost: 3,
+  ringInitialCost: 1000,
+  ringInitialPowerCost: 2500,
+  ringCost: 250,
+  ringPowerCost: 250,
   ringSacrifice: 'Alien',
   ringColorOne: '',
   ringColorTwo: '',
-  ringColorThree: '',
-  ringPower: 1.00,
+  ringColorThree: '', 
+  ringPower: 3.00,
   ringLevel: 0,
   ringPowerLevel: 0,
   rotationalSpeedX: 0,
@@ -175,7 +175,7 @@ const rings = [{
     return this.rotationalSpeedX + this.rotationalSpeedY
   }, 
   addAnimal() {
-    player.animal +=   ((this.rotationalSpeedX) + (this.rotationalSpeedY) * this.ringPower)
+    player.human += ((this.rotationalSpeedX) + (this.rotationalSpeedY)) * (this.ringPower * 3)
   },
 }]
 
